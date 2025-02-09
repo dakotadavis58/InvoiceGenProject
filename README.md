@@ -1,0 +1,1 @@
+Invoicet is an invoice generator app designed to replace paid services such as Freshbooks invoice management. After being a contractor for a while and paying for services such as Freshbooks I wanted to provide other small business owners the ability to mnanage their invoices for free. 
