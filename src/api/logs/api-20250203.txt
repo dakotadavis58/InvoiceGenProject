@@ -1,0 +1,1147 @@
+2025-02-03 17:04:13.845 -05:00 [INF] User profile is available. Using 'C:\Users\Dakota\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-03 17:04:13.962 -05:00 [INF] Now listening on: http://localhost:4000
+2025-02-03 17:04:13.964 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-03 17:04:13.966 -05:00 [INF] Hosting environment: Development
+2025-02-03 17:04:13.967 -05:00 [INF] Content root path: C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\src\api
+2025-02-03 17:13:53.635 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:4000/api/auth/login - application/json 69
+2025-02-03 17:13:53.669 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-02-03 17:13:53.693 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.AuthController.Login (InvoiceGeneratorAPI)'
+2025-02-03 17:13:53.711 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Auth.AuthResponse]] Login(InvoiceGeneratorAPI.DTOs.Auth.LoginRequest) on controller InvoiceGeneratorAPI.Controllers.AuthController (InvoiceGeneratorAPI).
+2025-02-03 17:13:54.371 -05:00 [WRN] The foreign key property 'Company.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-02-03 17:13:54.624 -05:00 [INF] Executed DbCommand (11ms) [Parameters=[@__request_Email_0='?' (Size = 18)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."CreatedAt", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."GoogleId", "u"."LastName", "u"."PasswordHash", "u"."RefreshToken", "u"."RefreshTokenExpiryTime", "u"."Role", "u"."UpdatedAt"
+FROM "Users" AS "u"
+WHERE "u"."Email" = @__request_Email_0
+LIMIT 1
+2025-02-03 17:13:55.001 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (Size = 44), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "RefreshToken" = @p0, "RefreshTokenExpiryTime" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2025-02-03 17:13:55.016 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Auth.AuthResponse'.
+2025-02-03 17:13:55.034 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.AuthController.Login (InvoiceGeneratorAPI) in 1318.4379ms
+2025-02-03 17:13:55.036 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.AuthController.Login (InvoiceGeneratorAPI)'
+2025-02-03 17:13:55.042 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:4000/api/auth/login - 200 null application/json; charset=utf-8 1408.4344ms
+2025-02-03 17:23:31.332 -05:00 [INF] User profile is available. Using 'C:\Users\Dakota\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-03 17:23:31.424 -05:00 [INF] Now listening on: http://localhost:4000
+2025-02-03 17:23:31.428 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-03 17:23:31.431 -05:00 [INF] Hosting environment: Development
+2025-02-03 17:23:31.432 -05:00 [INF] Content root path: C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\src\api
+2025-02-03 17:26:30.502 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/auth/register - null null
+2025-02-03 17:26:30.530 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-02-03 17:26:30.549 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:26:30.554 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/auth/register - 204 null null 52.8899ms
+2025-02-03 17:26:30.556 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:4000/api/auth/register - application/json 97
+2025-02-03 17:26:30.562 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:26:30.565 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.AuthController.Register (InvoiceGeneratorAPI)'
+2025-02-03 17:26:30.579 -05:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.User.UserDto]] Register(InvoiceGeneratorAPI.DTOs.Auth.RegisterRequest) on controller InvoiceGeneratorAPI.Controllers.AuthController (InvoiceGeneratorAPI).
+2025-02-03 17:26:30.978 -05:00 [WRN] The foreign key property 'Company.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-02-03 17:26:31.194 -05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__request_Email_0='?' (Size = 23)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Users" AS "u"
+    WHERE "u"."Email" = @__request_Email_0)
+2025-02-03 17:26:31.596 -05:00 [INF] Executed DbCommand (32ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (Size = 23), @p3='?' (DbType = Boolean), @p4='?' (Size = 6), @p5='?', @p6='?' (Size = 5), @p7='?' (Size = 60), @p8='?', @p9='?' (DbType = DateTime), @p10='?' (Size = 4), @p11='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" ("Id", "CreatedAt", "Email", "EmailConfirmed", "FirstName", "GoogleId", "LastName", "PasswordHash", "RefreshToken", "RefreshTokenExpiryTime", "Role", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11);
+2025-02-03 17:26:31.607 -05:00 [INF] Executing CreatedResult, writing value of type 'InvoiceGeneratorAPI.DTOs.User.UserDto'.
+2025-02-03 17:26:31.625 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.AuthController.Register (InvoiceGeneratorAPI) in 1042.5612ms
+2025-02-03 17:26:31.627 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.AuthController.Register (InvoiceGeneratorAPI)'
+2025-02-03 17:26:31.632 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:4000/api/auth/register - 201 null application/json; charset=utf-8 1076.588ms
+2025-02-03 17:26:41.768 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/auth/login - null null
+2025-02-03 17:26:41.772 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:26:41.773 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/auth/login - 204 null null 4.9199ms
+2025-02-03 17:26:41.774 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:4000/api/auth/login - application/json 57
+2025-02-03 17:26:41.778 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:26:41.778 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.AuthController.Login (InvoiceGeneratorAPI)'
+2025-02-03 17:26:41.783 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Auth.AuthResponse]] Login(InvoiceGeneratorAPI.DTOs.Auth.LoginRequest) on controller InvoiceGeneratorAPI.Controllers.AuthController (InvoiceGeneratorAPI).
+2025-02-03 17:26:41.822 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_Email_0='?' (Size = 23)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."CreatedAt", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."GoogleId", "u"."LastName", "u"."PasswordHash", "u"."RefreshToken", "u"."RefreshTokenExpiryTime", "u"."Role", "u"."UpdatedAt"
+FROM "Users" AS "u"
+WHERE "u"."Email" = @__request_Email_0
+LIMIT 1
+2025-02-03 17:26:42.098 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (Size = 44), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "RefreshToken" = @p0, "RefreshTokenExpiryTime" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2025-02-03 17:26:42.104 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Auth.AuthResponse'.
+2025-02-03 17:26:42.106 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.AuthController.Login (InvoiceGeneratorAPI) in 321.6587ms
+2025-02-03 17:26:42.107 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.AuthController.Login (InvoiceGeneratorAPI)'
+2025-02-03 17:26:42.108 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:4000/api/auth/login - 200 null application/json; charset=utf-8 333.8643ms
+2025-02-03 17:31:04.403 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/auth/logout - null null
+2025-02-03 17:31:04.406 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:31:04.407 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/auth/logout - 204 null null 4.0371ms
+2025-02-03 17:31:04.408 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:4000/api/auth/logout - application/json 0
+2025-02-03 17:31:04.411 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:31:04.413 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.AuthController.Logout (InvoiceGeneratorAPI)'
+2025-02-03 17:31:04.416 -05:00 [INF] Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller InvoiceGeneratorAPI.Controllers.AuthController (InvoiceGeneratorAPI).
+2025-02-03 17:31:04.465 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__refreshToken_0='?' (Size = 44)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."CreatedAt", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."GoogleId", "u"."LastName", "u"."PasswordHash", "u"."RefreshToken", "u"."RefreshTokenExpiryTime", "u"."Role", "u"."UpdatedAt"
+FROM "Users" AS "u"
+WHERE "u"."RefreshToken" = @__refreshToken_0
+LIMIT 1
+2025-02-03 17:31:04.468 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?', @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "RefreshToken" = @p0, "RefreshTokenExpiryTime" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2025-02-03 17:31:04.473 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-02-03 17:31:04.474 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.AuthController.Logout (InvoiceGeneratorAPI) in 56.8241ms
+2025-02-03 17:31:04.475 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.AuthController.Logout (InvoiceGeneratorAPI)'
+2025-02-03 17:31:04.476 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:4000/api/auth/logout - 200 0 null 67.8066ms
+2025-02-03 17:31:37.436 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/auth/login - null null
+2025-02-03 17:31:37.438 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:31:37.439 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/auth/login - 204 null null 3.4774ms
+2025-02-03 17:31:37.441 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:4000/api/auth/login - application/json 57
+2025-02-03 17:31:37.443 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:31:37.444 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.AuthController.Login (InvoiceGeneratorAPI)'
+2025-02-03 17:31:37.445 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Auth.AuthResponse]] Login(InvoiceGeneratorAPI.DTOs.Auth.LoginRequest) on controller InvoiceGeneratorAPI.Controllers.AuthController (InvoiceGeneratorAPI).
+2025-02-03 17:31:37.449 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_Email_0='?' (Size = 23)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."CreatedAt", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."GoogleId", "u"."LastName", "u"."PasswordHash", "u"."RefreshToken", "u"."RefreshTokenExpiryTime", "u"."Role", "u"."UpdatedAt"
+FROM "Users" AS "u"
+WHERE "u"."Email" = @__request_Email_0
+LIMIT 1
+2025-02-03 17:31:37.560 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (Size = 44), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "RefreshToken" = @p0, "RefreshTokenExpiryTime" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2025-02-03 17:31:37.564 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Auth.AuthResponse'.
+2025-02-03 17:31:37.565 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.AuthController.Login (InvoiceGeneratorAPI) in 119.0623ms
+2025-02-03 17:31:37.566 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.AuthController.Login (InvoiceGeneratorAPI)'
+2025-02-03 17:31:37.566 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:4000/api/auth/login - 200 null application/json; charset=utf-8 125.8899ms
+2025-02-03 17:45:21.207 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:45:21.210 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:45:21.211 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 4.1739ms
+2025-02-03 17:45:21.214 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:45:21.260 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-02-03 17:45:21.263 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-02-03 17:45:21.265 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 401 0 null 50.9426ms
+2025-02-03 17:45:22.271 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:45:22.275 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-02-03 17:45:22.276 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-02-03 17:45:22.277 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 401 0 null 6.3216ms
+2025-02-03 17:45:24.283 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:45:24.286 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-02-03 17:45:24.287 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-02-03 17:45:24.288 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 401 0 null 5.2624ms
+2025-02-03 17:45:28.303 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:45:28.305 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:45:28.305 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 2.3716ms
+2025-02-03 17:45:28.307 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:45:28.310 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-02-03 17:45:28.311 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-02-03 17:45:28.311 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 401 0 null 4.5932ms
+2025-02-03 17:45:33.645 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:45:33.646 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:45:33.647 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 2.6174ms
+2025-02-03 17:45:33.648 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:45:33.651 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-02-03 17:45:33.652 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-02-03 17:45:33.653 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 401 0 null 4.605ms
+2025-02-03 17:45:34.666 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:45:34.669 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-02-03 17:45:34.669 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-02-03 17:45:34.670 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 401 0 null 4.0456ms
+2025-02-03 17:45:36.674 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:45:36.676 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-02-03 17:45:36.677 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-02-03 17:45:36.677 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 401 0 null 3.8274ms
+2025-02-03 17:45:40.681 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:45:40.683 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:45:40.684 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 3.0265ms
+2025-02-03 17:45:40.685 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:45:40.688 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-02-03 17:45:40.688 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-02-03 17:45:40.689 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 401 0 null 4.1131ms
+2025-02-03 17:48:01.952 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:48:01.967 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:48:01.972 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 19.918ms
+2025-02-03 17:48:01.975 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:48:01.979 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-02-03 17:48:01.980 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-02-03 17:48:01.981 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 401 0 null 6.145ms
+2025-02-03 17:48:02.993 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:48:02.994 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-02-03 17:48:02.996 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-02-03 17:48:02.997 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 401 0 null 4.1299ms
+2025-02-03 17:48:05.014 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:48:05.016 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-02-03 17:48:05.017 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-02-03 17:48:05.018 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 401 0 null 3.6752ms
+2025-02-03 17:48:07.561 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:48:07.564 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:48:07.564 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 3.0381ms
+2025-02-03 17:48:07.566 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:48:07.569 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-02-03 17:48:07.570 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-02-03 17:48:07.571 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 401 0 null 4.4625ms
+2025-02-03 17:48:08.612 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:48:08.615 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-02-03 17:48:08.615 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-02-03 17:48:08.616 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 401 0 null 4.5235ms
+2025-02-03 17:48:10.634 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:48:10.637 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-02-03 17:48:10.638 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-02-03 17:48:10.638 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 401 0 null 3.9083ms
+2025-02-03 17:48:14.646 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:48:14.648 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:48:14.649 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 2.5036ms
+2025-02-03 17:48:14.650 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:48:14.653 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-02-03 17:48:14.654 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-02-03 17:48:14.655 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 401 0 null 4.5791ms
+2025-02-03 17:48:29.432 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/auth/logout - null null
+2025-02-03 17:48:29.434 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:48:29.436 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/auth/logout - 204 null null 3.6766ms
+2025-02-03 17:48:29.437 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:4000/api/auth/logout - application/json 0
+2025-02-03 17:48:29.440 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:48:29.441 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.AuthController.Logout (InvoiceGeneratorAPI)'
+2025-02-03 17:48:29.442 -05:00 [INF] Route matched with {action = "Logout", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller InvoiceGeneratorAPI.Controllers.AuthController (InvoiceGeneratorAPI).
+2025-02-03 17:48:29.450 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__refreshToken_0='?' (Size = 44)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."CreatedAt", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."GoogleId", "u"."LastName", "u"."PasswordHash", "u"."RefreshToken", "u"."RefreshTokenExpiryTime", "u"."Role", "u"."UpdatedAt"
+FROM "Users" AS "u"
+WHERE "u"."RefreshToken" = @__refreshToken_0
+LIMIT 1
+2025-02-03 17:48:29.454 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?', @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "RefreshToken" = @p0, "RefreshTokenExpiryTime" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2025-02-03 17:48:29.495 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-02-03 17:48:29.496 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.AuthController.Logout (InvoiceGeneratorAPI) in 51.7629ms
+2025-02-03 17:48:29.498 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.AuthController.Logout (InvoiceGeneratorAPI)'
+2025-02-03 17:48:29.499 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:4000/api/auth/logout - 200 0 null 62.9081ms
+2025-02-03 17:48:39.455 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/auth/login - null null
+2025-02-03 17:48:39.457 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:48:39.458 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/auth/login - 204 null null 3.5918ms
+2025-02-03 17:48:39.460 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:4000/api/auth/login - application/json 57
+2025-02-03 17:48:39.463 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:48:39.463 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.AuthController.Login (InvoiceGeneratorAPI)'
+2025-02-03 17:48:39.464 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Auth.AuthResponse]] Login(InvoiceGeneratorAPI.DTOs.Auth.LoginRequest) on controller InvoiceGeneratorAPI.Controllers.AuthController (InvoiceGeneratorAPI).
+2025-02-03 17:48:39.467 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_Email_0='?' (Size = 23)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."CreatedAt", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."GoogleId", "u"."LastName", "u"."PasswordHash", "u"."RefreshToken", "u"."RefreshTokenExpiryTime", "u"."Role", "u"."UpdatedAt"
+FROM "Users" AS "u"
+WHERE "u"."Email" = @__request_Email_0
+LIMIT 1
+2025-02-03 17:48:39.582 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (Size = 44), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "RefreshToken" = @p0, "RefreshTokenExpiryTime" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2025-02-03 17:48:39.585 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Auth.AuthResponse'.
+2025-02-03 17:48:39.587 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.AuthController.Login (InvoiceGeneratorAPI) in 121.4471ms
+2025-02-03 17:48:39.588 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.AuthController.Login (InvoiceGeneratorAPI)'
+2025-02-03 17:48:39.589 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:4000/api/auth/login - 200 null application/json; charset=utf-8 129.3166ms
+2025-02-03 17:48:42.504 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:48:42.506 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:48:42.507 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 2.4829ms
+2025-02-03 17:48:42.508 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:48:42.510 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-02-03 17:48:42.511 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-02-03 17:48:42.513 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 401 0 null 5.007ms
+2025-02-03 17:48:43.525 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:48:43.527 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-02-03 17:48:43.529 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-02-03 17:48:43.529 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 401 0 null 4.8458ms
+2025-02-03 17:48:45.548 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:48:45.550 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-02-03 17:48:45.551 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-02-03 17:48:45.551 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 401 0 null 3.4917ms
+2025-02-03 17:48:49.565 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:48:49.567 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:48:49.569 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 3.9849ms
+2025-02-03 17:48:49.570 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:48:49.573 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-02-03 17:48:49.574 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-02-03 17:48:49.575 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 401 0 null 4.9759ms
+2025-02-03 17:50:09.117 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:50:09.122 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:50:09.123 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 5.405ms
+2025-02-03 17:50:09.124 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:50:09.127 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-02-03 17:50:09.128 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-02-03 17:50:09.129 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 401 0 null 4.4031ms
+2025-02-03 17:50:10.142 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:50:10.144 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:50:10.145 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 3.326ms
+2025-02-03 17:50:10.147 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:50:10.231 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:50:10.233 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:50:10.238 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:50:10.371 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:50:10.375 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:50:10.398 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 157.1861ms
+2025-02-03 17:50:10.399 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:50:10.400 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 253.438ms
+2025-02-03 17:50:12.407 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:50:12.409 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:50:12.410 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:50:12.411 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:50:12.415 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:50:12.418 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:50:12.419 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 5.8559ms
+2025-02-03 17:50:12.420 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:50:12.421 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 13.8008ms
+2025-02-03 17:50:16.429 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:50:16.431 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:50:16.432 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 3.1329ms
+2025-02-03 17:50:16.433 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:50:16.438 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:50:16.438 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:50:16.439 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:50:16.443 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:50:16.445 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:50:16.446 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 4.9617ms
+2025-02-03 17:50:16.447 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:50:16.448 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 14.1018ms
+2025-02-03 17:52:12.706 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:52:12.708 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:52:12.709 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 3.3931ms
+2025-02-03 17:52:12.711 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:52:12.714 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:52:12.715 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:52:12.716 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:52:12.721 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:52:12.724 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:52:12.725 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 7.7954ms
+2025-02-03 17:52:12.727 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:52:12.728 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 16.7642ms
+2025-02-03 17:52:13.795 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:52:13.797 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:52:13.798 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:52:13.798 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:52:13.801 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:52:13.804 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:52:13.805 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 5.3372ms
+2025-02-03 17:52:13.806 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:52:13.807 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 11.9205ms
+2025-02-03 17:52:15.814 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:52:15.817 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:52:15.818 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:52:15.819 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:52:15.822 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:52:15.825 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:52:15.826 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 5.5843ms
+2025-02-03 17:52:15.828 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:52:15.829 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 15.2762ms
+2025-02-03 17:52:19.842 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:52:19.845 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:52:19.846 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 3.8648ms
+2025-02-03 17:52:19.847 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:52:19.850 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:52:19.851 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:52:19.852 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:52:19.856 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:52:19.858 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:52:19.859 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 5.5545ms
+2025-02-03 17:52:19.860 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:52:19.860 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 13.3331ms
+2025-02-03 17:52:22.716 -05:00 [INF] Application is shutting down...
+2025-02-03 17:52:27.462 -05:00 [INF] User profile is available. Using 'C:\Users\Dakota\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-03 17:52:27.542 -05:00 [INF] Now listening on: http://localhost:4000
+2025-02-03 17:52:27.544 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-03 17:52:27.546 -05:00 [INF] Hosting environment: Development
+2025-02-03 17:52:27.546 -05:00 [INF] Content root path: C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\src\api
+2025-02-03 17:52:30.595 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:52:30.655 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-02-03 17:52:30.672 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:52:30.677 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 83.3482ms
+2025-02-03 17:52:30.679 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:52:30.736 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:52:30.738 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:52:30.752 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:52:31.168 -05:00 [WRN] The foreign key property 'Company.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-02-03 17:52:31.389 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:52:31.406 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:52:31.461 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 705.1287ms
+2025-02-03 17:52:31.463 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:52:31.469 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 789.2618ms
+2025-02-03 17:52:32.480 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:52:32.486 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:52:32.487 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:52:32.489 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:52:32.504 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:52:32.506 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:52:32.508 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 16.4145ms
+2025-02-03 17:52:32.509 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:52:32.510 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 30.6115ms
+2025-02-03 17:52:34.519 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:52:34.523 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:52:34.524 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:52:34.525 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:52:34.566 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:52:34.568 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:52:34.569 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 42.9315ms
+2025-02-03 17:52:34.570 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:52:34.571 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 51.7239ms
+2025-02-03 17:52:38.577 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:52:38.580 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:52:38.580 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 3.4031ms
+2025-02-03 17:52:38.581 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:52:38.585 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:52:38.587 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:52:38.590 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:52:38.600 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:52:38.604 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:52:38.607 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 14.6408ms
+2025-02-03 17:52:38.608 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:52:38.609 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 27.9249ms
+2025-02-03 17:55:21.196 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:55:21.199 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:55:21.200 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 4.3833ms
+2025-02-03 17:55:21.203 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:55:21.207 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:55:21.208 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:55:21.209 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:55:21.215 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:55:21.218 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:55:21.220 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 8.9536ms
+2025-02-03 17:55:21.222 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:55:21.223 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 19.9787ms
+2025-02-03 17:55:22.243 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:55:22.246 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:55:22.246 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:55:22.247 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:55:22.250 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:55:22.252 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:55:22.253 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 5.1716ms
+2025-02-03 17:55:22.255 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:55:22.256 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 12.4698ms
+2025-02-03 17:55:24.261 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:55:24.265 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:55:24.267 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:55:24.268 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:55:24.272 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:55:24.275 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:55:24.277 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 7.5067ms
+2025-02-03 17:55:24.279 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:55:24.280 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 18.566ms
+2025-02-03 17:55:28.287 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:55:28.290 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:55:28.291 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 3.9989ms
+2025-02-03 17:55:28.292 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:55:28.295 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:55:28.296 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:55:28.297 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:55:28.302 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:55:28.305 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:55:28.306 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 7.2675ms
+2025-02-03 17:55:28.307 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:55:28.308 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 15.6816ms
+2025-02-03 17:55:55.508 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:55:55.511 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:55:55.512 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 4.133ms
+2025-02-03 17:55:55.514 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:55:55.518 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:55:55.518 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:55:55.520 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:55:55.524 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:55:55.526 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:55:55.528 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 7.4901ms
+2025-02-03 17:55:55.529 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:55:55.531 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 17.0551ms
+2025-02-03 17:55:56.551 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:55:56.555 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:55:56.555 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:55:56.556 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:55:56.561 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:55:56.564 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:55:56.566 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 8.5093ms
+2025-02-03 17:55:56.568 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:55:56.569 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 18.2685ms
+2025-02-03 17:55:58.585 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:55:58.587 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:55:58.588 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:55:58.589 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:55:58.592 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:55:58.595 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:55:58.597 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 6.829ms
+2025-02-03 17:55:58.599 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:55:58.600 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 14.4889ms
+2025-02-03 17:56:02.610 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:56:02.612 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:56:02.613 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 2.8626ms
+2025-02-03 17:56:02.614 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:56:02.617 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:56:02.617 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:56:02.618 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:56:02.621 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:56:02.622 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:56:02.623 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 4.1798ms
+2025-02-03 17:56:02.624 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:56:02.625 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 11.1855ms
+2025-02-03 17:56:31.875 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:56:31.877 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:56:31.879 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 4.2496ms
+2025-02-03 17:56:31.881 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:56:31.885 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:56:31.886 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:56:31.887 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:56:31.892 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:56:31.895 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:56:31.897 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 8.3821ms
+2025-02-03 17:56:31.898 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:56:31.900 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 18.9798ms
+2025-02-03 17:56:32.930 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:56:32.933 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:56:32.934 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:56:32.936 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:56:32.941 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:56:32.944 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:56:32.946 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 7.7273ms
+2025-02-03 17:56:32.947 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:56:32.950 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 19.8645ms
+2025-02-03 17:56:34.964 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:56:34.966 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:56:34.966 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:56:34.967 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:56:34.969 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:56:34.971 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:56:34.972 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 4.4398ms
+2025-02-03 17:56:34.973 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:56:34.974 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 10.4816ms
+2025-02-03 17:56:38.980 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:56:38.981 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:56:38.982 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 2.4476ms
+2025-02-03 17:56:38.983 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:56:38.986 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:56:38.987 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:56:38.988 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:56:38.990 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:56:38.992 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:56:38.993 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 4.1854ms
+2025-02-03 17:56:38.994 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:56:38.995 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 11.3246ms
+2025-02-03 17:57:30.987 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:57:30.989 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:57:30.990 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 3.2008ms
+2025-02-03 17:57:30.992 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:57:30.996 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:57:30.996 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:57:30.998 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:57:31.003 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:57:31.005 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:57:31.006 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 6.9694ms
+2025-02-03 17:57:31.008 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:57:31.011 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 19.6156ms
+2025-02-03 17:57:32.020 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:57:32.022 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:57:32.022 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:57:32.023 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:57:32.026 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:57:32.028 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:57:32.029 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 4.0696ms
+2025-02-03 17:57:32.030 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:57:32.031 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 11.2013ms
+2025-02-03 17:57:39.313 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:57:39.315 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:57:39.316 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 3.4515ms
+2025-02-03 17:57:39.317 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:57:39.320 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:57:39.321 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:57:39.321 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:57:39.325 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:57:39.328 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:57:39.330 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 7.1083ms
+2025-02-03 17:57:39.331 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:57:39.333 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 15.2521ms
+2025-02-03 17:57:49.163 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:57:49.166 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:57:49.168 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 5.001ms
+2025-02-03 17:57:49.169 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:57:49.172 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:57:49.173 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:57:49.174 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:57:49.176 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:57:49.178 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:57:49.179 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 4.789ms
+2025-02-03 17:57:49.180 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:57:49.183 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 13.2513ms
+2025-02-03 17:58:08.696 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:58:08.699 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:58:08.700 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 4.0609ms
+2025-02-03 17:58:08.702 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:58:08.705 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:58:08.706 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:58:08.706 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:58:08.709 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:58:08.710 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:58:08.712 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 4.1003ms
+2025-02-03 17:58:08.713 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:58:08.714 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 11.8593ms
+2025-02-03 17:58:12.595 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:58:12.599 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:58:12.600 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:58:12.601 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:58:12.605 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:58:12.606 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:58:12.607 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 4.7721ms
+2025-02-03 17:58:12.609 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:58:12.610 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 14.3712ms
+2025-02-03 17:58:22.133 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:58:22.136 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:58:22.137 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 4.3459ms
+2025-02-03 17:58:22.138 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:58:22.144 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:58:22.145 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:58:22.146 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:58:22.151 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:58:22.155 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:58:22.156 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 8.4448ms
+2025-02-03 17:58:22.158 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:58:22.159 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 20.8467ms
+2025-02-03 17:59:09.336 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:59:09.338 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:59:09.339 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 3.0207ms
+2025-02-03 17:59:09.340 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:59:09.343 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:59:09.344 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:59:09.345 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:59:09.351 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:59:09.354 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:59:09.355 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 7.4285ms
+2025-02-03 17:59:09.356 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:59:09.357 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 16.3455ms
+2025-02-03 17:59:21.463 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:59:21.465 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:59:21.466 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 3.195ms
+2025-02-03 17:59:21.468 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:59:21.471 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:59:21.472 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:59:21.473 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:59:21.476 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:59:21.478 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:59:21.479 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 4.0647ms
+2025-02-03 17:59:21.479 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:59:21.480 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 12.0204ms
+2025-02-03 17:59:36.875 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:59:36.877 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:59:36.878 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 3.0892ms
+2025-02-03 17:59:36.880 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:59:36.883 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:59:36.884 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:59:36.885 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:59:36.889 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:59:36.890 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:59:36.891 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 4.5218ms
+2025-02-03 17:59:36.893 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:59:36.894 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 13.5844ms
+2025-02-03 17:59:40.197 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:59:40.200 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:59:40.200 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:59:40.201 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:59:40.205 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:59:40.208 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:59:40.209 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 6.4944ms
+2025-02-03 17:59:40.211 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:59:40.212 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 14.1951ms
+2025-02-03 17:59:41.256 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:59:41.258 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:59:41.258 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:59:41.259 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:59:41.262 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:59:41.264 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:59:41.265 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 3.7467ms
+2025-02-03 17:59:41.266 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:59:41.266 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 10.7185ms
+2025-02-03 17:59:43.279 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 17:59:43.282 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:59:43.282 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 3.1829ms
+2025-02-03 17:59:43.283 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:59:43.286 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:59:43.287 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:59:43.288 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:59:43.291 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:59:43.293 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:59:43.294 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 4.6717ms
+2025-02-03 17:59:43.296 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:59:43.296 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 13.2234ms
+2025-02-03 17:59:47.313 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 17:59:47.315 -05:00 [INF] CORS policy execution successful.
+2025-02-03 17:59:47.315 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:59:47.316 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 17:59:47.318 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 17:59:47.320 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-02-03 17:59:47.321 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 4.04ms
+2025-02-03 17:59:47.322 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 17:59:47.323 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 404 null application/problem+json; charset=utf-8 10.2107ms
+2025-02-03 18:00:07.658 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 18:00:07.660 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:00:07.661 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 3.0094ms
+2025-02-03 18:00:07.662 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:4000/api/company - application/json 84
+2025-02-03 18:00:07.666 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:00:07.667 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.CreateCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:00:07.673 -05:00 [INF] Route matched with {action = "CreateCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] CreateCompany(InvoiceGeneratorAPI.DTOs.Company.CreateCompanyRequest) on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 18:00:07.839 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?', @p4='?', @p5='?' (DbType = DateTime), @p6='?' (Size = 13), @p7='?', @p8='?', @p9='?', @p10='?' (Size = 7), @p11='?', @p12='?' (Size = 10), @p13='?', @p14='?', @p15='?', @p16='?', @p17='?' (DbType = DateTime), @p18='?' (DbType = Guid), @p19='?' (DbType = Guid), @p20='?' (Size = 8)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Companies" ("Id", "AddressLine1", "AddressLine2", "City", "Country", "CreatedAt", "Email", "InvoiceNotes", "InvoicePrefix", "LogoUrl", "Name", "PaymentInstructions", "Phone", "PostalCode", "RegistrationNumber", "State", "TaxNumber", "UpdatedAt", "UserId", "UserId1", "Website")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20);
+2025-02-03 18:00:07.846 -05:00 [INF] Executing CreatedAtActionResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Company.CompanyDto'.
+2025-02-03 18:00:07.860 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.CreateCompany (InvoiceGeneratorAPI) in 185.6415ms
+2025-02-03 18:00:07.861 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.CreateCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:00:07.863 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:4000/api/company - 201 null application/json; charset=utf-8 200.439ms
+2025-02-03 18:00:07.866 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 18:00:07.868 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:00:07.869 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:00:07.870 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 18:00:07.872 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 18:00:07.878 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Company.CompanyDto'.
+2025-02-03 18:00:07.879 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 7.9132ms
+2025-02-03 18:00:07.880 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:00:07.881 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 200 null application/json; charset=utf-8 14.7904ms
+2025-02-03 18:00:24.684 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company/logo - null null
+2025-02-03 18:00:24.687 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:00:24.688 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company/logo - 204 null null 3.6109ms
+2025-02-03 18:00:24.690 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:4000/api/company/logo - application/json 534761
+2025-02-03 18:00:24.692 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:00:24.692 -05:00 [INF] Executing endpoint '415 HTTP Unsupported Media Type'
+2025-02-03 18:00:24.693 -05:00 [INF] Executed endpoint '415 HTTP Unsupported Media Type'
+2025-02-03 18:00:24.694 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:4000/api/company/logo - 415 0 null 4.8813ms
+2025-02-03 18:00:24.698 -05:00 [INF] Connection id "0HNA4KLO9C6RO", Request id "0HNA4KLO9C6RO:0000001D": the application completed without reading the entire request body.
+2025-02-03 18:00:39.256 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company/logo - null null
+2025-02-03 18:00:39.258 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:00:39.259 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company/logo - 204 null null 2.9539ms
+2025-02-03 18:00:39.260 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:4000/api/company/logo - application/json 21884
+2025-02-03 18:00:39.263 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:00:39.263 -05:00 [INF] Executing endpoint '415 HTTP Unsupported Media Type'
+2025-02-03 18:00:39.264 -05:00 [INF] Executed endpoint '415 HTTP Unsupported Media Type'
+2025-02-03 18:00:39.265 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:4000/api/company/logo - 415 0 null 4.934ms
+2025-02-03 18:01:08.218 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 18:01:08.221 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:01:08.223 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 4.3204ms
+2025-02-03 18:01:08.225 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 18:01:08.229 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:01:08.229 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:01:08.230 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 18:01:08.235 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 18:01:08.238 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Company.CompanyDto'.
+2025-02-03 18:01:08.240 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 7.8377ms
+2025-02-03 18:01:08.241 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:01:08.242 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 200 null application/json; charset=utf-8 16.5918ms
+2025-02-03 18:01:11.821 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company/logo - null null
+2025-02-03 18:01:11.824 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:01:11.824 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company/logo - 204 null null 3.5372ms
+2025-02-03 18:01:11.827 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:4000/api/company/logo - application/json 534761
+2025-02-03 18:01:11.829 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:01:11.830 -05:00 [INF] Executing endpoint '415 HTTP Unsupported Media Type'
+2025-02-03 18:01:11.831 -05:00 [INF] Executed endpoint '415 HTTP Unsupported Media Type'
+2025-02-03 18:01:11.833 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:4000/api/company/logo - 415 0 null 5.8055ms
+2025-02-03 18:03:13.723 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 18:03:13.726 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:03:13.728 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 4.1501ms
+2025-02-03 18:03:13.730 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 18:03:13.733 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:03:13.735 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:03:13.736 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 18:03:13.740 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 18:03:13.743 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Company.CompanyDto'.
+2025-02-03 18:03:13.745 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 7.1582ms
+2025-02-03 18:03:13.746 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:03:13.747 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 200 null application/json; charset=utf-8 17.2052ms
+2025-02-03 18:03:37.430 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 18:03:37.432 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:03:37.433 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 2.8624ms
+2025-02-03 18:03:37.434 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 18:03:37.437 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:03:37.437 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:03:37.438 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 18:03:37.441 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 18:03:37.443 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Company.CompanyDto'.
+2025-02-03 18:03:37.445 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 5.119ms
+2025-02-03 18:03:37.446 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:03:37.447 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 200 null application/json; charset=utf-8 13.0058ms
+2025-02-03 18:03:41.738 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company/logo - null null
+2025-02-03 18:03:41.741 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:03:41.741 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company/logo - 204 null null 3.1808ms
+2025-02-03 18:03:41.743 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:4000/api/company/logo - application/json 534761
+2025-02-03 18:03:41.747 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:03:41.747 -05:00 [INF] Executing endpoint '415 HTTP Unsupported Media Type'
+2025-02-03 18:03:41.748 -05:00 [INF] Executed endpoint '415 HTTP Unsupported Media Type'
+2025-02-03 18:03:41.749 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:4000/api/company/logo - 415 0 null 5.6239ms
+2025-02-03 18:04:34.201 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 18:04:34.204 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:04:34.205 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 3.6417ms
+2025-02-03 18:04:34.207 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 18:04:34.210 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:04:34.211 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:04:34.212 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 18:04:34.217 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 18:04:34.220 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Company.CompanyDto'.
+2025-02-03 18:04:34.221 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 6.1328ms
+2025-02-03 18:04:34.222 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:04:34.224 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 200 null application/json; charset=utf-8 16.3511ms
+2025-02-03 18:04:38.561 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 18:04:38.564 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:04:38.564 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:04:38.565 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 18:04:38.568 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 18:04:38.570 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Company.CompanyDto'.
+2025-02-03 18:04:38.571 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 5.0974ms
+2025-02-03 18:04:38.573 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:04:38.574 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 200 null application/json; charset=utf-8 12.07ms
+2025-02-03 18:04:41.884 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company/logo - null null
+2025-02-03 18:04:41.886 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:04:41.886 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company/logo - 204 null null 2.4271ms
+2025-02-03 18:04:41.888 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:4000/api/company/logo - multipart/form-data; boundary=----WebKitFormBoundaryMzYLSi3odIl5ewYy 534761
+2025-02-03 18:04:41.891 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:04:41.891 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.UploadLogo (InvoiceGeneratorAPI)'
+2025-02-03 18:04:41.897 -05:00 [INF] Route matched with {action = "UploadLogo", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] UploadLogo(Microsoft.AspNetCore.Http.IFormFile) on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 18:04:41.915 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 18:04:42.555 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (Size = 89), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Companies" SET "LogoUrl" = @p0, "UpdatedAt" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2025-02-03 18:04:42.560 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Company.CompanyDto'.
+2025-02-03 18:04:42.561 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.UploadLogo (InvoiceGeneratorAPI) in 662.9491ms
+2025-02-03 18:04:42.563 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.UploadLogo (InvoiceGeneratorAPI)'
+2025-02-03 18:04:42.565 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:4000/api/company/logo - 200 null application/json; charset=utf-8 677.8151ms
+2025-02-03 18:04:42.568 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 18:04:42.570 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:04:42.570 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 2.4293ms
+2025-02-03 18:04:42.571 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 18:04:42.574 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:04:42.574 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:04:42.575 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 18:04:42.577 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 18:04:42.579 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Company.CompanyDto'.
+2025-02-03 18:04:42.580 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 4.0327ms
+2025-02-03 18:04:42.581 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:04:42.582 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 200 null application/json; charset=utf-8 10.5565ms
+2025-02-03 18:05:10.379 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 18:05:10.381 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:05:10.382 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 3.6069ms
+2025-02-03 18:05:10.385 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 18:05:10.387 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:05:10.388 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:05:10.389 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 18:05:10.393 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 18:05:10.395 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Company.CompanyDto'.
+2025-02-03 18:05:10.396 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 5.9108ms
+2025-02-03 18:05:10.398 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:05:10.399 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 200 null application/json; charset=utf-8 13.5852ms
+2025-02-03 18:06:17.918 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 18:06:17.920 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:06:17.920 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 2.4928ms
+2025-02-03 18:06:17.921 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 18:06:17.924 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:06:17.925 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:06:17.926 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 18:06:17.928 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 18:06:17.930 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Company.CompanyDto'.
+2025-02-03 18:06:17.931 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 3.943ms
+2025-02-03 18:06:17.932 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:06:17.933 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 200 null application/json; charset=utf-8 11.6843ms
+2025-02-03 18:06:24.148 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company/logo - null null
+2025-02-03 18:06:24.150 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:06:24.150 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company/logo - 204 null null 2.7261ms
+2025-02-03 18:06:24.151 -05:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:4000/api/company/logo - application/json null
+2025-02-03 18:06:24.154 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:06:24.155 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.RemoveLogo (InvoiceGeneratorAPI)'
+2025-02-03 18:06:24.157 -05:00 [INF] Route matched with {action = "RemoveLogo", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] RemoveLogo() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 18:06:24.160 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 18:06:24.291 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?', @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Companies" SET "LogoUrl" = @p0, "UpdatedAt" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2025-02-03 18:06:24.296 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Company.CompanyDto'.
+2025-02-03 18:06:24.297 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.RemoveLogo (InvoiceGeneratorAPI) in 139.1039ms
+2025-02-03 18:06:24.298 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.RemoveLogo (InvoiceGeneratorAPI)'
+2025-02-03 18:06:24.300 -05:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:4000/api/company/logo - 200 null application/json; charset=utf-8 148.2907ms
+2025-02-03 18:06:24.302 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 18:06:24.304 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:06:24.305 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 2.3513ms
+2025-02-03 18:06:24.306 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 18:06:24.308 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:06:24.308 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:06:24.309 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 18:06:24.311 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 18:06:24.313 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Company.CompanyDto'.
+2025-02-03 18:06:24.314 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 3.7491ms
+2025-02-03 18:06:24.315 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:06:24.316 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 200 null application/json; charset=utf-8 10.1585ms
+2025-02-03 18:06:27.016 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:4000/api/company/logo - multipart/form-data; boundary=----WebKitFormBoundaryKBEAia2KdKlR6GvM 534761
+2025-02-03 18:06:27.018 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:06:27.018 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.UploadLogo (InvoiceGeneratorAPI)'
+2025-02-03 18:06:27.019 -05:00 [INF] Route matched with {action = "UploadLogo", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] UploadLogo(Microsoft.AspNetCore.Http.IFormFile) on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 18:06:27.026 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 18:06:27.256 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (Size = 89), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Companies" SET "LogoUrl" = @p0, "UpdatedAt" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2025-02-03 18:06:27.278 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Company.CompanyDto'.
+2025-02-03 18:06:27.280 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.UploadLogo (InvoiceGeneratorAPI) in 259.1005ms
+2025-02-03 18:06:27.281 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.UploadLogo (InvoiceGeneratorAPI)'
+2025-02-03 18:06:27.283 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:4000/api/company/logo - 200 null application/json; charset=utf-8 267.0994ms
+2025-02-03 18:06:27.285 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 18:06:27.287 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:06:27.288 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:06:27.289 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 18:06:27.292 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 18:06:27.294 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Company.CompanyDto'.
+2025-02-03 18:06:27.295 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 4.9603ms
+2025-02-03 18:06:27.296 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:06:27.297 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 200 null application/json; charset=utf-8 11.7594ms
+2025-02-03 18:07:53.524 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 18:07:53.526 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:07:53.527 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 2.9211ms
+2025-02-03 18:07:53.528 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 18:07:53.531 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:07:53.532 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:07:53.533 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 18:07:53.538 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 18:07:53.542 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Company.CompanyDto'.
+2025-02-03 18:07:53.544 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 9.3414ms
+2025-02-03 18:07:53.545 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:07:53.547 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 200 null application/json; charset=utf-8 18.6926ms
+2025-02-03 18:08:10.946 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:4000/api/company - null null
+2025-02-03 18:08:10.948 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:08:10.949 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:4000/api/company - 204 null null 2.2756ms
+2025-02-03 18:08:10.950 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 18:08:10.954 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:08:10.955 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:08:10.956 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 18:08:10.958 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 18:08:10.959 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Company.CompanyDto'.
+2025-02-03 18:08:10.960 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 3.6462ms
+2025-02-03 18:08:10.961 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:08:10.962 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 200 null application/json; charset=utf-8 11.6686ms
+2025-02-03 18:08:13.293 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:4000/api/company - application/json null
+2025-02-03 18:08:13.295 -05:00 [INF] CORS policy execution successful.
+2025-02-03 18:08:13.296 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:08:13.297 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-02-03 18:08:13.301 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-02-03 18:08:13.303 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Company.CompanyDto'.
+2025-02-03 18:08:13.304 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 5.0574ms
+2025-02-03 18:08:13.305 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-02-03 18:08:13.306 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:4000/api/company - 200 null application/json; charset=utf-8 13.4778ms

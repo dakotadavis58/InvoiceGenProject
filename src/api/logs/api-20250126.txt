@@ -1,0 +1,926 @@
+2025-01-26 17:20:19.176 -05:00 [INF] User profile is available. Using 'C:\Users\Dakota\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-26 17:20:19.255 -05:00 [INF] Now listening on: http://localhost:3000
+2025-01-26 17:20:19.259 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-26 17:20:19.260 -05:00 [INF] Hosting environment: Development
+2025-01-26 17:20:19.260 -05:00 [INF] Content root path: C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\InvoiceGeneratorAPI
+2025-01-26 17:20:33.610 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:3000/api/auth/login - application/json 69
+2025-01-26 17:20:33.649 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-01-26 17:20:33.669 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.AuthController.Login (InvoiceGeneratorAPI)'
+2025-01-26 17:20:33.686 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Auth.AuthResponse]] Login(InvoiceGeneratorAPI.DTOs.Auth.LoginRequest) on controller InvoiceGeneratorAPI.Controllers.AuthController (InvoiceGeneratorAPI).
+2025-01-26 17:20:34.293 -05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__request_Email_0='?' (Size = 18)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."CompanyName", "u"."CreatedAt", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."GoogleId", "u"."LastName", "u"."PasswordHash", "u"."RefreshToken", "u"."RefreshTokenExpiryTime", "u"."Role", "u"."UpdatedAt"
+FROM "Users" AS "u"
+WHERE "u"."Email" = @__request_Email_0
+LIMIT 1
+2025-01-26 17:20:34.655 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (Size = 44), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "RefreshToken" = @p0, "RefreshTokenExpiryTime" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2025-01-26 17:20:34.671 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Auth.AuthResponse'.
+2025-01-26 17:20:34.686 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.AuthController.Login (InvoiceGeneratorAPI) in 996.1306ms
+2025-01-26 17:20:34.688 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.AuthController.Login (InvoiceGeneratorAPI)'
+2025-01-26 17:20:34.694 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:3000/api/auth/login - 200 null application/json; charset=utf-8 1092.966ms
+2025-01-26 17:29:44.381 -05:00 [INF] Application is shutting down...
+2025-01-26 17:31:53.053 -05:00 [INF] User profile is available. Using 'C:\Users\Dakota\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-26 17:31:53.124 -05:00 [INF] Now listening on: http://localhost:3000
+2025-01-26 17:31:53.127 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-26 17:31:53.128 -05:00 [INF] Hosting environment: Development
+2025-01-26 17:31:53.129 -05:00 [INF] Content root path: C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\InvoiceGeneratorAPI
+2025-01-26 17:31:57.451 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:3000/api/auth/login - application/json 69
+2025-01-26 17:31:57.477 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-01-26 17:31:57.492 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.AuthController.Login (InvoiceGeneratorAPI)'
+2025-01-26 17:31:57.509 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Auth.AuthResponse]] Login(InvoiceGeneratorAPI.DTOs.Auth.LoginRequest) on controller InvoiceGeneratorAPI.Controllers.AuthController (InvoiceGeneratorAPI).
+2025-01-26 17:31:58.102 -05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__request_Email_0='?' (Size = 18)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."CompanyName", "u"."CreatedAt", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."GoogleId", "u"."LastName", "u"."PasswordHash", "u"."RefreshToken", "u"."RefreshTokenExpiryTime", "u"."Role", "u"."UpdatedAt"
+FROM "Users" AS "u"
+WHERE "u"."Email" = @__request_Email_0
+LIMIT 1
+2025-01-26 17:31:58.508 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (Size = 44), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "RefreshToken" = @p0, "RefreshTokenExpiryTime" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2025-01-26 17:31:58.522 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Auth.AuthResponse'.
+2025-01-26 17:31:58.539 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.AuthController.Login (InvoiceGeneratorAPI) in 1026.9927ms
+2025-01-26 17:31:58.543 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.AuthController.Login (InvoiceGeneratorAPI)'
+2025-01-26 17:31:58.548 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:3000/api/auth/login - 200 null application/json; charset=utf-8 1097.3651ms
+2025-01-26 17:34:31.735 -05:00 [INF] Application is shutting down...
+2025-01-26 17:36:00.946 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-01-26 17:36:00.975 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-01-26 17:36:00.985 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-01-26 17:36:00.996 -05:00 [INF] Applying migration '20250126223444_AddCompanyEntity'.
+2025-01-26 17:36:01.028 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Companies" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Companies" PRIMARY KEY,
+    "UserId" TEXT NOT NULL,
+    "Name" TEXT NOT NULL,
+    "LogoUrl" TEXT NULL,
+    "Website" TEXT NULL,
+    "Phone" TEXT NULL,
+    "Email" TEXT NULL,
+    "AddressLine1" TEXT NULL,
+    "AddressLine2" TEXT NULL,
+    "City" TEXT NULL,
+    "State" TEXT NULL,
+    "PostalCode" TEXT NULL,
+    "Country" TEXT NULL,
+    "TaxNumber" TEXT NULL,
+    "RegistrationNumber" TEXT NULL,
+    "InvoicePrefix" TEXT NULL,
+    "InvoiceNotes" TEXT NULL,
+    "PaymentInstructions" TEXT NULL,
+    "CreatedAt" TEXT NOT NULL,
+    "UpdatedAt" TEXT NOT NULL,
+    CONSTRAINT "FK_Companies_Users_UserId" FOREIGN KEY ("UserId") REFERENCES "Users" ("Id") ON DELETE CASCADE
+);
+2025-01-26 17:36:01.032 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Companies_UserId" ON "Companies" ("UserId");
+2025-01-26 17:36:01.034 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250126223444_AddCompanyEntity', '8.0.1');
+2025-01-26 17:42:52.358 -05:00 [WRN] The foreign key property 'Company.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-01-26 17:42:52.471 -05:00 [WRN] The foreign key property 'Company.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-01-26 17:43:00.379 -05:00 [WRN] The foreign key property 'Company.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-01-26 17:43:00.509 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-01-26 17:43:00.516 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-01-26 17:43:00.525 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-01-26 17:43:00.537 -05:00 [INF] Applying migration '20250126224252_RemoveCompanyNameFromUser'.
+2025-01-26 17:43:00.572 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Companies" ADD "UserId1" TEXT NULL;
+2025-01-26 17:43:00.574 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Companies_UserId1" ON "Companies" ("UserId1");
+2025-01-26 17:43:00.576 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ef_temp_Users" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Users" PRIMARY KEY,
+    "CreatedAt" TEXT NOT NULL,
+    "Email" TEXT NOT NULL,
+    "EmailConfirmed" INTEGER NOT NULL,
+    "FirstName" TEXT NOT NULL,
+    "GoogleId" TEXT NULL,
+    "LastName" TEXT NOT NULL,
+    "PasswordHash" TEXT NOT NULL,
+    "RefreshToken" TEXT NULL,
+    "RefreshTokenExpiryTime" TEXT NULL,
+    "Role" TEXT NOT NULL,
+    "UpdatedAt" TEXT NOT NULL
+);
+2025-01-26 17:43:00.578 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ef_temp_Users" ("Id", "CreatedAt", "Email", "EmailConfirmed", "FirstName", "GoogleId", "LastName", "PasswordHash", "RefreshToken", "RefreshTokenExpiryTime", "Role", "UpdatedAt")
+SELECT "Id", "CreatedAt", "Email", "EmailConfirmed", "FirstName", "GoogleId", "LastName", "PasswordHash", "RefreshToken", "RefreshTokenExpiryTime", "Role", "UpdatedAt"
+FROM "Users";
+2025-01-26 17:43:00.580 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ef_temp_Companies" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Companies" PRIMARY KEY,
+    "AddressLine1" TEXT NULL,
+    "AddressLine2" TEXT NULL,
+    "City" TEXT NULL,
+    "Country" TEXT NULL,
+    "CreatedAt" TEXT NOT NULL,
+    "Email" TEXT NULL,
+    "InvoiceNotes" TEXT NULL,
+    "InvoicePrefix" TEXT NULL,
+    "LogoUrl" TEXT NULL,
+    "Name" TEXT NOT NULL,
+    "PaymentInstructions" TEXT NULL,
+    "Phone" TEXT NULL,
+    "PostalCode" TEXT NULL,
+    "RegistrationNumber" TEXT NULL,
+    "State" TEXT NULL,
+    "TaxNumber" TEXT NULL,
+    "UpdatedAt" TEXT NOT NULL,
+    "UserId" TEXT NOT NULL,
+    "UserId1" TEXT NULL,
+    "Website" TEXT NULL,
+    CONSTRAINT "FK_Companies_Users_UserId" FOREIGN KEY ("UserId") REFERENCES "Users" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_Companies_Users_UserId1" FOREIGN KEY ("UserId1") REFERENCES "Users" ("Id")
+);
+2025-01-26 17:43:00.583 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ef_temp_Companies" ("Id", "AddressLine1", "AddressLine2", "City", "Country", "CreatedAt", "Email", "InvoiceNotes", "InvoicePrefix", "LogoUrl", "Name", "PaymentInstructions", "Phone", "PostalCode", "RegistrationNumber", "State", "TaxNumber", "UpdatedAt", "UserId", "UserId1", "Website")
+SELECT "Id", "AddressLine1", "AddressLine2", "City", "Country", "CreatedAt", "Email", "InvoiceNotes", "InvoicePrefix", "LogoUrl", "Name", "PaymentInstructions", "Phone", "PostalCode", "RegistrationNumber", "State", "TaxNumber", "UpdatedAt", "UserId", "UserId1", "Website"
+FROM "Companies";
+2025-01-26 17:43:00.589 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 0;
+2025-01-26 17:43:00.591 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP TABLE "Users";
+2025-01-26 17:43:00.594 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "ef_temp_Users" RENAME TO "Users";
+2025-01-26 17:43:00.596 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP TABLE "Companies";
+2025-01-26 17:43:00.598 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "ef_temp_Companies" RENAME TO "Companies";
+2025-01-26 17:43:00.600 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 1;
+2025-01-26 17:43:00.602 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Users_Email" ON "Users" ("Email");
+2025-01-26 17:43:00.603 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Companies_UserId" ON "Companies" ("UserId");
+2025-01-26 17:43:00.605 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Companies_UserId1" ON "Companies" ("UserId1");
+2025-01-26 17:43:00.606 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250126224252_RemoveCompanyNameFromUser', '8.0.1');
+2025-01-26 18:07:19.430 -05:00 [INF] User profile is available. Using 'C:\Users\Dakota\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-26 18:07:19.505 -05:00 [INF] Now listening on: http://localhost:3000
+2025-01-26 18:07:19.508 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-26 18:07:19.508 -05:00 [INF] Hosting environment: Development
+2025-01-26 18:07:19.509 -05:00 [INF] Content root path: C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\InvoiceGeneratorAPI
+2025-01-26 18:07:27.917 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/swagger - null null
+2025-01-26 18:07:27.955 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/swagger - 301 0 null 38.883ms
+2025-01-26 18:07:27.961 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/swagger/index.html - null null
+2025-01-26 18:07:28.015 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/swagger/index.html - 200 null text/html;charset=utf-8 54.3072ms
+2025-01-26 18:07:28.042 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/swagger/swagger-ui.css - null null
+2025-01-26 18:07:28.043 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/swagger/swagger-ui-bundle.js - null null
+2025-01-26 18:07:28.043 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/swagger/swagger-ui-standalone-preset.js - null null
+2025-01-26 18:07:28.043 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/swagger/index.js - null null
+2025-01-26 18:07:28.043 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/swagger/index.css - null null
+2025-01-26 18:07:28.051 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/swagger/index.js - 200 null application/javascript;charset=utf-8 8.4374ms
+2025-01-26 18:07:28.056 -05:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2025-01-26 18:07:28.057 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/swagger/index.css - 200 202 text/css 14.342ms
+2025-01-26 18:07:28.059 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-01-26 18:07:28.059 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-01-26 18:07:28.060 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-01-26 18:07:28.062 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/swagger/swagger-ui-standalone-preset.js - 200 230007 text/javascript 19.4485ms
+2025-01-26 18:07:28.062 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/swagger/swagger-ui.css - 200 152035 text/css 20.2485ms
+2025-01-26 18:07:28.063 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/swagger/swagger-ui-bundle.js - 200 1426050 text/javascript 20.4045ms
+2025-01-26 18:07:28.183 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/swagger/favicon-16x16.png - null null
+2025-01-26 18:07:28.185 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2025-01-26 18:07:28.186 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/swagger/favicon-16x16.png - 200 665 image/png 3.0128ms
+2025-01-26 18:07:28.203 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/swagger/v1/swagger.json - null null
+2025-01-26 18:07:28.287 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 83.8244ms
+2025-01-26 18:07:57.059 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/api/Company - null null
+2025-01-26 18:07:57.064 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-01-26 18:07:57.079 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-26 18:07:57.082 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-01-26 18:07:57.084 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/api/Company - 401 0 null 24.5186ms
+2025-01-26 18:08:23.089 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/api/Company - null null
+2025-01-26 18:08:23.093 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-26 18:08:23.094 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-01-26 18:08:23.095 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/api/Company - 401 0 null 5.4096ms
+2025-01-26 18:08:36.255 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:3000/api/auth/login - application/json 69
+2025-01-26 18:08:36.259 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.AuthController.Login (InvoiceGeneratorAPI)'
+2025-01-26 18:08:36.273 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Auth.AuthResponse]] Login(InvoiceGeneratorAPI.DTOs.Auth.LoginRequest) on controller InvoiceGeneratorAPI.Controllers.AuthController (InvoiceGeneratorAPI).
+2025-01-26 18:08:36.644 -05:00 [WRN] The foreign key property 'Company.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-01-26 18:08:36.877 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__request_Email_0='?' (Size = 18)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."CreatedAt", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."GoogleId", "u"."LastName", "u"."PasswordHash", "u"."RefreshToken", "u"."RefreshTokenExpiryTime", "u"."Role", "u"."UpdatedAt"
+FROM "Users" AS "u"
+WHERE "u"."Email" = @__request_Email_0
+LIMIT 1
+2025-01-26 18:08:37.202 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (Size = 44), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "RefreshToken" = @p0, "RefreshTokenExpiryTime" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2025-01-26 18:08:37.217 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Auth.AuthResponse'.
+2025-01-26 18:08:37.231 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.AuthController.Login (InvoiceGeneratorAPI) in 954.0617ms
+2025-01-26 18:08:37.232 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.AuthController.Login (InvoiceGeneratorAPI)'
+2025-01-26 18:08:37.237 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:3000/api/auth/login - 200 null application/json; charset=utf-8 982.2526ms
+2025-01-26 18:09:08.461 -05:00 [INF] Application is shutting down...
+2025-01-26 18:10:08.251 -05:00 [INF] User profile is available. Using 'C:\Users\Dakota\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-26 18:10:08.323 -05:00 [INF] Now listening on: http://localhost:3000
+2025-01-26 18:10:08.326 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-26 18:10:08.327 -05:00 [INF] Hosting environment: Development
+2025-01-26 18:10:08.328 -05:00 [INF] Content root path: C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\InvoiceGeneratorAPI
+2025-01-26 18:10:13.238 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:3000/api/auth/login - application/json 69
+2025-01-26 18:10:13.265 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-01-26 18:10:13.281 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.AuthController.Login (InvoiceGeneratorAPI)'
+2025-01-26 18:10:13.298 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Auth.AuthResponse]] Login(InvoiceGeneratorAPI.DTOs.Auth.LoginRequest) on controller InvoiceGeneratorAPI.Controllers.AuthController (InvoiceGeneratorAPI).
+2025-01-26 18:10:13.668 -05:00 [WRN] The foreign key property 'Company.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-01-26 18:10:13.889 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__request_Email_0='?' (Size = 18)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."CreatedAt", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."GoogleId", "u"."LastName", "u"."PasswordHash", "u"."RefreshToken", "u"."RefreshTokenExpiryTime", "u"."Role", "u"."UpdatedAt"
+FROM "Users" AS "u"
+WHERE "u"."Email" = @__request_Email_0
+LIMIT 1
+2025-01-26 18:10:14.240 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (Size = 44), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "RefreshToken" = @p0, "RefreshTokenExpiryTime" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2025-01-26 18:10:14.260 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Auth.AuthResponse'.
+2025-01-26 18:10:14.283 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.AuthController.Login (InvoiceGeneratorAPI) in 981.045ms
+2025-01-26 18:10:14.287 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.AuthController.Login (InvoiceGeneratorAPI)'
+2025-01-26 18:10:14.293 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:3000/api/auth/login - 200 null application/json; charset=utf-8 1056.6869ms
+2025-01-26 18:10:29.272 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/api/Company - null null
+2025-01-26 18:10:29.280 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-26 18:10:29.282 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-01-26 18:10:29.284 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/api/Company - 401 0 null 12.0038ms
+2025-01-26 18:10:30.125 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/api/Company - null null
+2025-01-26 18:10:30.129 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-26 18:10:30.130 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-01-26 18:10:30.131 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/api/Company - 401 0 null 5.5822ms
+2025-01-26 18:10:47.389 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/api/users/40fe74d8-90e3-451a-8252-e2ecf2a213e0 - null null
+2025-01-26 18:10:47.391 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-26 18:10:47.393 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-01-26 18:10:47.393 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/api/users/40fe74d8-90e3-451a-8252-e2ecf2a213e0 - 401 0 null 4.723ms
+2025-01-26 18:11:53.804 -05:00 [INF] Application is shutting down...
+2025-01-26 18:11:56.430 -05:00 [INF] User profile is available. Using 'C:\Users\Dakota\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-26 18:11:56.505 -05:00 [INF] Now listening on: http://localhost:3000
+2025-01-26 18:11:56.508 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-26 18:11:56.509 -05:00 [INF] Hosting environment: Development
+2025-01-26 18:11:56.510 -05:00 [INF] Content root path: C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\InvoiceGeneratorAPI
+2025-01-26 18:11:59.320 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/swagger/index.html - null null
+2025-01-26 18:11:59.436 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/swagger/index.html - 200 null text/html;charset=utf-8 118.3393ms
+2025-01-26 18:11:59.468 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/swagger/swagger-ui-standalone-preset.js - null null
+2025-01-26 18:11:59.468 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/swagger/index.js - null null
+2025-01-26 18:11:59.474 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/swagger/index.js - 200 null application/javascript;charset=utf-8 6.2777ms
+2025-01-26 18:11:59.481 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-01-26 18:11:59.483 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/swagger/swagger-ui-standalone-preset.js - 499 230007 text/javascript 15.788ms
+2025-01-26 18:11:59.593 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/swagger/favicon-16x16.png - null null
+2025-01-26 18:11:59.596 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2025-01-26 18:11:59.597 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/swagger/favicon-16x16.png - 499 665 image/png 4.0862ms
+2025-01-26 18:11:59.612 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/swagger/v1/swagger.json - null null
+2025-01-26 18:11:59.699 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 86.5597ms
+2025-01-26 18:12:23.427 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/api/Company - null null
+2025-01-26 18:12:23.431 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-01-26 18:12:23.477 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-01-26 18:12:23.490 -05:00 [INF] Route matched with {action = "GetCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] GetCompany() on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-01-26 18:12:23.853 -05:00 [WRN] The foreign key property 'Company.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-01-26 18:12:24.071 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-01-26 18:12:24.084 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-01-26 18:12:24.115 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI) in 621.7359ms
+2025-01-26 18:12:24.116 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.GetCompany (InvoiceGeneratorAPI)'
+2025-01-26 18:12:24.120 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/api/Company - 404 null application/problem+json; charset=utf-8 693.0297ms
+2025-01-26 18:12:59.053 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/Health - null null
+2025-01-26 18:12:59.056 -05:00 [INF] Executing endpoint 'HealthController.GetHealth (InvoiceGeneratorAPI)'
+2025-01-26 18:12:59.059 -05:00 [INF] Route matched with {action = "GetHealth", controller = "Health"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetHealth() on controller HealthController (InvoiceGeneratorAPI).
+2025-01-26 18:12:59.060 -05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-01-26 18:12:59.068 -05:00 [INF] Executed action HealthController.GetHealth (InvoiceGeneratorAPI) in 8.1299ms
+2025-01-26 18:12:59.069 -05:00 [INF] Executed endpoint 'HealthController.GetHealth (InvoiceGeneratorAPI)'
+2025-01-26 18:12:59.070 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/Health - 200 null application/json; charset=utf-8 17.1486ms
+2025-01-26 18:13:08.774 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/WeatherForecast - null null
+2025-01-26 18:13:08.777 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.WeatherForecastController.Get (InvoiceGeneratorAPI)'
+2025-01-26 18:13:08.779 -05:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[InvoiceGeneratorAPI.WeatherForecast] Get() on controller InvoiceGeneratorAPI.Controllers.WeatherForecastController (InvoiceGeneratorAPI).
+2025-01-26 18:13:08.781 -05:00 [INF] Executing ObjectResult, writing value of type 'InvoiceGeneratorAPI.WeatherForecast[]'.
+2025-01-26 18:13:08.788 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.WeatherForecastController.Get (InvoiceGeneratorAPI) in 8.4154ms
+2025-01-26 18:13:08.789 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.WeatherForecastController.Get (InvoiceGeneratorAPI)'
+2025-01-26 18:13:08.795 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/WeatherForecast - 200 null application/json; charset=utf-8 21.6943ms
+2025-01-26 18:13:21.080 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/api/users/40fe74d8-90e3-451a-8252-e2ecf2a213e0 - null null
+2025-01-26 18:13:21.083 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.UserController.GetUser (InvoiceGeneratorAPI)'
+2025-01-26 18:13:21.088 -05:00 [INF] Route matched with {action = "GetUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.User.UserDto]] GetUser(System.Guid) on controller InvoiceGeneratorAPI.Controllers.UserController (InvoiceGeneratorAPI).
+2025-01-26 18:13:21.125 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."CreatedAt", "u"."Email", "u"."EmailConfirmed", "u"."FirstName", "u"."GoogleId", "u"."LastName", "u"."PasswordHash", "u"."RefreshToken", "u"."RefreshTokenExpiryTime", "u"."Role", "u"."UpdatedAt"
+FROM "Users" AS "u"
+WHERE "u"."Id" = @__get_Item_0
+LIMIT 1
+2025-01-26 18:13:21.166 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.User.UserDto'.
+2025-01-26 18:13:21.173 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.UserController.GetUser (InvoiceGeneratorAPI) in 83.6625ms
+2025-01-26 18:13:21.175 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.UserController.GetUser (InvoiceGeneratorAPI)'
+2025-01-26 18:13:21.176 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/api/users/40fe74d8-90e3-451a-8252-e2ecf2a213e0 - 200 null application/json; charset=utf-8 96.3751ms
+2025-01-26 18:15:25.764 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:3000/api/Company - application/json 441
+2025-01-26 18:15:25.767 -05:00 [INF] CORS policy execution successful.
+2025-01-26 18:15:25.768 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.CreateCompany (InvoiceGeneratorAPI)'
+2025-01-26 18:15:25.770 -05:00 [INF] Route matched with {action = "CreateCompany", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] CreateCompany(InvoiceGeneratorAPI.DTOs.Company.CreateCompanyRequest) on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-01-26 18:15:25.904 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 9), @p2='?' (Size = 6), @p3='?' (Size = 8), @p4='?' (Size = 1), @p5='?' (DbType = DateTime), @p6='?' (Size = 13), @p7='?' (Size = 14), @p8='?' (Size = 4), @p9='?', @p10='?' (Size = 12), @p11='?' (Size = 34), @p12='?' (Size = 10), @p13='?' (Size = 5), @p14='?' (Size = 9), @p15='?' (Size = 6), @p16='?' (Size = 8), @p17='?' (DbType = DateTime), @p18='?' (DbType = Guid), @p19='?' (DbType = Guid), @p20='?' (Size = 8)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Companies" ("Id", "AddressLine1", "AddressLine2", "City", "Country", "CreatedAt", "Email", "InvoiceNotes", "InvoicePrefix", "LogoUrl", "Name", "PaymentInstructions", "Phone", "PostalCode", "RegistrationNumber", "State", "TaxNumber", "UpdatedAt", "UserId", "UserId1", "Website")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20);
+2025-01-26 18:15:25.911 -05:00 [INF] Executing CreatedAtActionResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Company.CompanyDto'.
+2025-01-26 18:15:25.925 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.CreateCompany (InvoiceGeneratorAPI) in 153.5502ms
+2025-01-26 18:15:25.927 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.CreateCompany (InvoiceGeneratorAPI)'
+2025-01-26 18:15:25.928 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:3000/api/Company - 201 null application/json; charset=utf-8 164.6952ms
+2025-01-26 18:16:38.548 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:3000/api/Company/logo - multipart/form-data; boundary=---------------------------203647568441100152511431515321 534799
+2025-01-26 18:16:38.551 -05:00 [INF] CORS policy execution successful.
+2025-01-26 18:16:38.551 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.UploadLogo (InvoiceGeneratorAPI)'
+2025-01-26 18:16:38.554 -05:00 [INF] Route matched with {action = "UploadLogo", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] UploadLogo(Microsoft.AspNetCore.Http.IFormFile) on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-01-26 18:16:38.578 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-01-26 18:16:39.690 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.UploadLogo (InvoiceGeneratorAPI) in 1134.6767ms
+2025-01-26 18:16:39.693 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.UploadLogo (InvoiceGeneratorAPI)'
+2025-01-26 18:16:39.695 -05:00 [ERR] Unhandled exception
+Amazon.S3.AmazonS3Exception: The bucket does not allow ACLs
+ ---> Amazon.Runtime.Internal.HttpErrorResponseException: Exception of type 'Amazon.Runtime.Internal.HttpErrorResponseException' was thrown.
+   at Amazon.Runtime.HttpWebRequestMessage.ProcessHttpResponseMessage(HttpResponseMessage responseMessage)
+   at Amazon.Runtime.HttpWebRequestMessage.GetResponseAsync(CancellationToken cancellationToken)
+   at Amazon.Runtime.Internal.HttpHandler`1.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RedirectHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.Unmarshaller.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ResponseHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleExceptionStream(IRequestContext requestContext, IWebResponseData httpErrorResponse, HttpErrorResponseException exception, Stream responseStream)
+   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleExceptionAsync(IExecutionContext executionContext, HttpErrorResponseException exception)
+   at Amazon.Runtime.Internal.ExceptionHandler`1.HandleAsync(IExecutionContext executionContext, Exception exception)
+   at Amazon.Runtime.Internal.ErrorHandler.ProcessExceptionAsync(IExecutionContext executionContext, Exception exception)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.Signer.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.S3Express.S3ExpressPreSigner.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.EndpointDiscoveryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.EndpointDiscoveryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Internal.AmazonS3ExceptionHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.S3.Transfer.Internal.SimpleUploadCommand.ExecuteAsync(CancellationToken cancellationToken)
+   at Amazon.S3.Transfer.TransferUtility.UploadAsync(TransferUtilityUploadRequest request, CancellationToken cancellationToken)
+   at InvoiceGeneratorAPI.Services.CompanyService.UpdateLogoAsync(Guid userId, IFormFile file) in C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\InvoiceGeneratorAPI\Services\CompanyService.cs:line 151
+   at InvoiceGeneratorAPI.Controllers.CompanyController.UploadLogo(IFormFile file) in C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\InvoiceGeneratorAPI\Controllers\CompanyController.cs:line 95
+   at lambda_method314(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at InvoiceGeneratorAPI.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\InvoiceGeneratorAPI\Middleware\ErrorHandlingMiddleware.cs:line 23
+2025-01-26 18:16:39.755 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:3000/api/Company/logo - 500 null application/json 1207.0568ms
+2025-01-26 18:19:56.547 -05:00 [INF] Application is shutting down...
+2025-01-26 18:20:00.961 -05:00 [INF] User profile is available. Using 'C:\Users\Dakota\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-26 18:20:01.034 -05:00 [INF] Now listening on: http://localhost:3000
+2025-01-26 18:20:01.036 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-26 18:20:01.038 -05:00 [INF] Hosting environment: Development
+2025-01-26 18:20:01.038 -05:00 [INF] Content root path: C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\InvoiceGeneratorAPI
+2025-01-26 18:20:06.693 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:3000/api/Company/logo - multipart/form-data; boundary=---------------------------118138726734988211761173892462 534799
+2025-01-26 18:20:06.721 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-01-26 18:20:06.777 -05:00 [INF] CORS policy execution successful.
+2025-01-26 18:20:06.780 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.UploadLogo (InvoiceGeneratorAPI)'
+2025-01-26 18:20:06.794 -05:00 [INF] Route matched with {action = "UploadLogo", controller = "Company"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Company.CompanyDto]] UploadLogo(Microsoft.AspNetCore.Http.IFormFile) on controller InvoiceGeneratorAPI.Controllers.CompanyController (InvoiceGeneratorAPI).
+2025-01-26 18:20:07.191 -05:00 [WRN] The foreign key property 'Company.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-01-26 18:20:07.412 -05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-01-26 18:20:08.220 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@p2='?' (DbType = Guid), @p0='?' (Size = 89), @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Companies" SET "LogoUrl" = @p0, "UpdatedAt" = @p1
+WHERE "Id" = @p2
+RETURNING 1;
+2025-01-26 18:20:08.236 -05:00 [INF] Executing OkObjectResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Company.CompanyDto'.
+2025-01-26 18:20:08.278 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.CompanyController.UploadLogo (InvoiceGeneratorAPI) in 1480.4273ms
+2025-01-26 18:20:08.280 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.CompanyController.UploadLogo (InvoiceGeneratorAPI)'
+2025-01-26 18:20:08.286 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:3000/api/Company/logo - 200 null application/json; charset=utf-8 1594.112ms
+2025-01-26 18:25:00.363 -05:00 [INF] Application is shutting down...
+2025-01-26 18:25:06.607 -05:00 [WRN] The foreign key property 'Company.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-01-26 18:25:06.726 -05:00 [WRN] The foreign key property 'Company.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-01-26 18:25:10.704 -05:00 [WRN] The foreign key property 'Company.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-01-26 18:25:10.834 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-01-26 18:25:10.841 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-01-26 18:25:10.850 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-01-26 18:25:10.860 -05:00 [INF] Applying migration '20250126232506_AddClientEntity'.
+2025-01-26 18:25:10.897 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Invoices" ADD "ClientId" TEXT NULL;
+2025-01-26 18:25:10.901 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Clients" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Clients" PRIMARY KEY,
+    "CompanyId" TEXT NOT NULL,
+    "Name" TEXT NOT NULL,
+    "Email" TEXT NOT NULL,
+    "Phone" TEXT NULL,
+    "AddressLine1" TEXT NULL,
+    "AddressLine2" TEXT NULL,
+    "City" TEXT NULL,
+    "State" TEXT NULL,
+    "PostalCode" TEXT NULL,
+    "Country" TEXT NULL,
+    "TaxNumber" TEXT NULL,
+    "Notes" TEXT NULL,
+    "CreatedAt" TEXT NOT NULL,
+    "UpdatedAt" TEXT NOT NULL,
+    CONSTRAINT "FK_Clients_Companies_CompanyId" FOREIGN KEY ("CompanyId") REFERENCES "Companies" ("Id") ON DELETE CASCADE
+);
+2025-01-26 18:25:10.903 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Invoices_ClientId" ON "Invoices" ("ClientId");
+2025-01-26 18:25:10.904 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Clients_CompanyId" ON "Clients" ("CompanyId");
+2025-01-26 18:25:10.906 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ef_temp_Invoices" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Invoices" PRIMARY KEY,
+    "ClientAddress" TEXT NULL,
+    "ClientEmail" TEXT NOT NULL,
+    "ClientId" TEXT NULL,
+    "ClientName" TEXT NOT NULL,
+    "CreatedAt" TEXT NOT NULL,
+    "DueDate" TEXT NOT NULL,
+    "InvoiceNumber" TEXT NOT NULL,
+    "IssueDate" TEXT NOT NULL,
+    "Notes" TEXT NULL,
+    "Status" TEXT NOT NULL,
+    "SubTotal" TEXT NOT NULL,
+    "TaxAmount" TEXT NOT NULL,
+    "TaxRate" TEXT NOT NULL,
+    "TotalAmount" TEXT NOT NULL,
+    "UpdatedAt" TEXT NOT NULL,
+    "UserId" TEXT NOT NULL,
+    CONSTRAINT "FK_Invoices_Clients_ClientId" FOREIGN KEY ("ClientId") REFERENCES "Clients" ("Id"),
+    CONSTRAINT "FK_Invoices_Users_UserId" FOREIGN KEY ("UserId") REFERENCES "Users" ("Id") ON DELETE CASCADE
+);
+2025-01-26 18:25:10.908 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ef_temp_Invoices" ("Id", "ClientAddress", "ClientEmail", "ClientId", "ClientName", "CreatedAt", "DueDate", "InvoiceNumber", "IssueDate", "Notes", "Status", "SubTotal", "TaxAmount", "TaxRate", "TotalAmount", "UpdatedAt", "UserId")
+SELECT "Id", "ClientAddress", "ClientEmail", "ClientId", "ClientName", "CreatedAt", "DueDate", "InvoiceNumber", "IssueDate", "Notes", "Status", "SubTotal", "TaxAmount", "TaxRate", "TotalAmount", "UpdatedAt", "UserId"
+FROM "Invoices";
+2025-01-26 18:25:10.913 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 0;
+2025-01-26 18:25:10.915 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP TABLE "Invoices";
+2025-01-26 18:25:10.918 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "ef_temp_Invoices" RENAME TO "Invoices";
+2025-01-26 18:25:10.920 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 1;
+2025-01-26 18:25:10.921 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Invoices_ClientId" ON "Invoices" ("ClientId");
+2025-01-26 18:25:10.922 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Invoices_UserId" ON "Invoices" ("UserId");
+2025-01-26 18:25:10.924 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250126232506_AddClientEntity', '8.0.1');
+2025-01-26 18:26:31.126 -05:00 [INF] User profile is available. Using 'C:\Users\Dakota\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-26 18:26:31.211 -05:00 [INF] Now listening on: http://localhost:3000
+2025-01-26 18:26:31.214 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-26 18:26:31.214 -05:00 [INF] Hosting environment: Development
+2025-01-26 18:26:31.215 -05:00 [INF] Content root path: C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\InvoiceGeneratorAPI
+2025-01-26 18:26:32.854 -05:00 [INF] Application is shutting down...
+2025-01-26 18:27:41.587 -05:00 [INF] User profile is available. Using 'C:\Users\Dakota\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-26 18:27:41.658 -05:00 [INF] Now listening on: http://localhost:3000
+2025-01-26 18:27:41.661 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-26 18:27:41.663 -05:00 [INF] Hosting environment: Development
+2025-01-26 18:27:41.664 -05:00 [INF] Content root path: C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\InvoiceGeneratorAPI
+2025-01-26 18:27:46.693 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/swagger/index.html - null null
+2025-01-26 18:27:46.823 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/swagger/index.html - 200 null text/html;charset=utf-8 129.1325ms
+2025-01-26 18:27:46.866 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/swagger/index.js - null null
+2025-01-26 18:27:46.866 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/swagger/swagger-ui-standalone-preset.js - null null
+2025-01-26 18:27:46.870 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/swagger/index.js - 200 null application/javascript;charset=utf-8 4.1964ms
+2025-01-26 18:27:46.880 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-01-26 18:27:46.881 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/swagger/swagger-ui-standalone-preset.js - 499 230007 text/javascript 15.9834ms
+2025-01-26 18:27:46.984 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/swagger/favicon-16x16.png - null null
+2025-01-26 18:27:46.986 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2025-01-26 18:27:46.987 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/swagger/favicon-16x16.png - 499 665 image/png 3.6415ms
+2025-01-26 18:27:47.018 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/swagger/v1/swagger.json - null null
+2025-01-26 18:27:47.104 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 86.4235ms
+2025-01-26 18:27:55.791 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:3000/api/Client - application/json 256
+2025-01-26 18:27:55.795 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-01-26 18:27:55.810 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-26 18:27:55.813 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-01-26 18:27:55.813 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:3000/api/Client - 401 0 null 22.1462ms
+2025-01-26 18:28:15.611 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:3000/api/Client - application/json 256
+2025-01-26 18:28:15.645 -05:00 [INF] CORS policy execution successful.
+2025-01-26 18:28:15.648 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.ClientController.CreateClient (InvoiceGeneratorAPI)'
+2025-01-26 18:28:15.662 -05:00 [INF] Route matched with {action = "CreateClient", controller = "Client"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Client.ClientDto]] CreateClient(InvoiceGeneratorAPI.DTOs.Client.CreateClientRequest) on controller InvoiceGeneratorAPI.Controllers.ClientController (InvoiceGeneratorAPI).
+2025-01-26 18:28:15.828 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-01-26 18:28:15.849 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.ClientController.CreateClient (InvoiceGeneratorAPI) in 182.8837ms
+2025-01-26 18:28:15.850 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.ClientController.CreateClient (InvoiceGeneratorAPI)'
+2025-01-26 18:28:15.852 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:3000/api/Client - 400 null application/problem+json; charset=utf-8 240.7851ms
+2025-01-26 18:29:19.260 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:3000/api/Client - application/json 288
+2025-01-26 18:29:19.263 -05:00 [INF] CORS policy execution successful.
+2025-01-26 18:29:19.264 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.ClientController.CreateClient (InvoiceGeneratorAPI)'
+2025-01-26 18:29:19.265 -05:00 [INF] Route matched with {action = "CreateClient", controller = "Client"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Client.ClientDto]] CreateClient(InvoiceGeneratorAPI.DTOs.Client.CreateClientRequest) on controller InvoiceGeneratorAPI.Controllers.ClientController (InvoiceGeneratorAPI).
+2025-01-26 18:29:19.543 -05:00 [WRN] The foreign key property 'Company.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-01-26 18:29:19.770 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-01-26 18:29:19.910 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 9), @p2='?' (Size = 6), @p3='?' (Size = 8), @p4='?' (DbType = Guid), @p5='?' (Size = 13), @p6='?' (DbType = DateTime), @p7='?' (Size = 13), @p8='?' (Size = 4), @p9='?' (Size = 16), @p10='?' (Size = 10), @p11='?' (Size = 5), @p12='?' (Size = 6), @p13='?' (Size = 8), @p14='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Clients" ("Id", "AddressLine1", "AddressLine2", "City", "CompanyId", "Country", "CreatedAt", "Email", "Name", "Notes", "Phone", "PostalCode", "State", "TaxNumber", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2025-01-26 18:29:19.917 -05:00 [INF] Executing CreatedAtActionResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Client.ClientDto'.
+2025-01-26 18:29:19.933 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.ClientController.CreateClient (InvoiceGeneratorAPI) in 667.4498ms
+2025-01-26 18:29:19.935 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.ClientController.CreateClient (InvoiceGeneratorAPI)'
+2025-01-26 18:29:19.939 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:3000/api/Client - 201 null application/json; charset=utf-8 678.3296ms
+2025-01-26 18:40:58.927 -05:00 [INF] Application is shutting down...
+2025-01-26 18:41:49.493 -05:00 [WRN] The foreign key property 'Company.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-01-26 18:41:49.633 -05:00 [WRN] The foreign key property 'Company.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-01-26 18:41:54.308 -05:00 [WRN] The foreign key property 'Company.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-01-26 18:41:54.446 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-01-26 18:41:54.454 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-01-26 18:41:54.463 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-01-26 18:41:54.475 -05:00 [INF] Applying migration '20250126234149_AddInvoiceEntities'.
+2025-01-26 18:41:54.517 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Invoices" RENAME COLUMN "UserId" TO "CompanyId";
+2025-01-26 18:41:54.520 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP INDEX "IX_Invoices_UserId";
+2025-01-26 18:41:54.523 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Invoices_CompanyId" ON "Invoices" ("CompanyId");
+2025-01-26 18:41:54.526 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Invoices" ADD "PaymentInstructions" TEXT NULL;
+2025-01-26 18:41:54.528 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Invoices" ADD "PaymentTerms" TEXT NULL;
+2025-01-26 18:41:54.529 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ef_temp_Invoices" (
+    "Id" TEXT NOT NULL CONSTRAINT "PK_Invoices" PRIMARY KEY,
+    "ClientAddress" TEXT NULL,
+    "ClientEmail" TEXT NOT NULL,
+    "ClientId" TEXT NULL,
+    "ClientName" TEXT NOT NULL,
+    "CompanyId" TEXT NOT NULL,
+    "CreatedAt" TEXT NOT NULL,
+    "DueDate" TEXT NOT NULL,
+    "InvoiceNumber" TEXT NOT NULL,
+    "IssueDate" TEXT NOT NULL,
+    "Notes" TEXT NULL,
+    "PaymentInstructions" TEXT NULL,
+    "PaymentTerms" TEXT NULL,
+    "Status" TEXT NOT NULL,
+    "SubTotal" TEXT NOT NULL,
+    "TaxAmount" TEXT NOT NULL,
+    "TaxRate" TEXT NOT NULL,
+    "TotalAmount" TEXT NOT NULL,
+    "UpdatedAt" TEXT NOT NULL,
+    CONSTRAINT "FK_Invoices_Clients_ClientId" FOREIGN KEY ("ClientId") REFERENCES "Clients" ("Id"),
+    CONSTRAINT "FK_Invoices_Companies_CompanyId" FOREIGN KEY ("CompanyId") REFERENCES "Companies" ("Id") ON DELETE CASCADE
+);
+2025-01-26 18:41:54.532 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ef_temp_Invoices" ("Id", "ClientAddress", "ClientEmail", "ClientId", "ClientName", "CompanyId", "CreatedAt", "DueDate", "InvoiceNumber", "IssueDate", "Notes", "PaymentInstructions", "PaymentTerms", "Status", "SubTotal", "TaxAmount", "TaxRate", "TotalAmount", "UpdatedAt")
+SELECT "Id", "ClientAddress", "ClientEmail", "ClientId", "ClientName", "CompanyId", "CreatedAt", "DueDate", "InvoiceNumber", "IssueDate", "Notes", "PaymentInstructions", "PaymentTerms", "Status", "SubTotal", "TaxAmount", "TaxRate", "TotalAmount", "UpdatedAt"
+FROM "Invoices";
+2025-01-26 18:41:54.537 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 0;
+2025-01-26 18:41:54.539 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP TABLE "Invoices";
+2025-01-26 18:41:54.541 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "ef_temp_Invoices" RENAME TO "Invoices";
+2025-01-26 18:41:54.542 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 1;
+2025-01-26 18:41:54.544 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Invoices_ClientId" ON "Invoices" ("ClientId");
+2025-01-26 18:41:54.546 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Invoices_CompanyId" ON "Invoices" ("CompanyId");
+2025-01-26 18:41:54.547 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250126234149_AddInvoiceEntities', '8.0.1');
+2025-01-26 18:53:38.008 -05:00 [INF] User profile is available. Using 'C:\Users\Dakota\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-26 18:53:38.082 -05:00 [INF] Now listening on: http://localhost:3000
+2025-01-26 18:53:38.084 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-26 18:53:38.086 -05:00 [INF] Hosting environment: Development
+2025-01-26 18:53:38.086 -05:00 [INF] Content root path: C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\InvoiceGeneratorAPI
+2025-01-26 18:55:17.098 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/swagger/index.html - null null
+2025-01-26 18:55:17.186 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/swagger/index.html - 200 null text/html;charset=utf-8 88.325ms
+2025-01-26 18:55:17.211 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/swagger/swagger-ui-standalone-preset.js - null null
+2025-01-26 18:55:17.214 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/swagger/index.js - null null
+2025-01-26 18:55:17.218 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/swagger/index.js - 200 null application/javascript;charset=utf-8 3.404ms
+2025-01-26 18:55:17.222 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-01-26 18:55:17.223 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/swagger/swagger-ui-standalone-preset.js - 499 230007 text/javascript 12.1771ms
+2025-01-26 18:55:17.330 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/swagger/favicon-16x16.png - null null
+2025-01-26 18:55:17.333 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2025-01-26 18:55:17.334 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/swagger/favicon-16x16.png - 499 665 image/png 3.7238ms
+2025-01-26 18:55:17.358 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/swagger/v1/swagger.json - null null
+2025-01-26 18:55:17.465 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 106.8737ms
+2025-01-26 18:55:48.645 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:3000/api/Invoice - application/json 425
+2025-01-26 18:55:48.649 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-01-26 18:55:48.665 -05:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-01-26 18:55:48.668 -05:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-01-26 18:55:48.669 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:3000/api/Invoice - 401 0 null 23.824ms
+2025-01-26 18:56:02.003 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:3000/api/Invoice - application/json 425
+2025-01-26 18:56:02.037 -05:00 [INF] CORS policy execution successful.
+2025-01-26 18:56:02.040 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.InvoiceController.CreateInvoice (InvoiceGeneratorAPI)'
+2025-01-26 18:56:02.054 -05:00 [INF] Route matched with {action = "CreateInvoice", controller = "Invoice"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Invoice.InvoiceDto]] CreateInvoice(InvoiceGeneratorAPI.DTOs.Invoice.CreateInvoiceRequest) on controller InvoiceGeneratorAPI.Controllers.InvoiceController (InvoiceGeneratorAPI).
+2025-01-26 18:56:02.234 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-01-26 18:56:02.252 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.InvoiceController.CreateInvoice (InvoiceGeneratorAPI) in 193.8476ms
+2025-01-26 18:56:02.253 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.InvoiceController.CreateInvoice (InvoiceGeneratorAPI)'
+2025-01-26 18:56:02.256 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:3000/api/Invoice - 400 null application/problem+json; charset=utf-8 252.6946ms
+2025-01-26 18:56:17.354 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:3000/api/Invoice - application/json 425
+2025-01-26 18:56:17.357 -05:00 [INF] CORS policy execution successful.
+2025-01-26 18:56:17.358 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.InvoiceController.CreateInvoice (InvoiceGeneratorAPI)'
+2025-01-26 18:56:17.359 -05:00 [INF] Route matched with {action = "CreateInvoice", controller = "Invoice"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Invoice.InvoiceDto]] CreateInvoice(InvoiceGeneratorAPI.DTOs.Invoice.CreateInvoiceRequest) on controller InvoiceGeneratorAPI.Controllers.InvoiceController (InvoiceGeneratorAPI).
+2025-01-26 18:56:17.648 -05:00 [WRN] The foreign key property 'Company.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-01-26 18:56:17.871 -05:00 [INF] Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-01-26 18:56:17.933 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__companyId_0='?' (DbType = Guid), @__request_ClientId_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."CompanyId", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."Name", "c"."Notes", "c"."Phone", "c"."PostalCode", "c"."State", "c"."TaxNumber", "c"."UpdatedAt"
+FROM "Clients" AS "c"
+WHERE "c"."CompanyId" = @__companyId_0 AND "c"."Id" = @__request_ClientId_1
+LIMIT 1
+2025-01-26 18:56:17.943 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.InvoiceController.CreateInvoice (InvoiceGeneratorAPI) in 582.2546ms
+2025-01-26 18:56:17.944 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.InvoiceController.CreateInvoice (InvoiceGeneratorAPI)'
+2025-01-26 18:56:17.953 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:3000/api/Invoice - 404 null application/json 599.1001ms
+2025-01-26 18:56:46.189 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/api/Client - null null
+2025-01-26 18:56:46.191 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.ClientController.GetClients (InvoiceGeneratorAPI)'
+2025-01-26 18:56:46.194 -05:00 [INF] Route matched with {action = "GetClients", controller = "Client"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[InvoiceGeneratorAPI.DTOs.Client.ClientDto]]] GetClients() on controller InvoiceGeneratorAPI.Controllers.ClientController (InvoiceGeneratorAPI).
+2025-01-26 18:56:46.208 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-01-26 18:56:46.255 -05:00 [INF] Executed DbCommand (37ms) [Parameters=[@__companyId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."CompanyId", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."Name", "c"."Notes", "c"."Phone", "c"."PostalCode", "c"."State", "c"."TaxNumber", "c"."UpdatedAt"
+FROM "Clients" AS "c"
+WHERE "c"."CompanyId" = @__companyId_0
+ORDER BY "c"."Name"
+2025-01-26 18:56:46.281 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InvoiceGeneratorAPI.DTOs.Client.ClientDto, InvoiceGeneratorAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-26 18:56:46.288 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.ClientController.GetClients (InvoiceGeneratorAPI) in 91.9775ms
+2025-01-26 18:56:46.289 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.ClientController.GetClients (InvoiceGeneratorAPI)'
+2025-01-26 18:56:46.290 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/api/Client - 200 null application/json; charset=utf-8 101.0781ms
+2025-01-26 18:57:02.776 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:3000/api/Invoice - application/json 425
+2025-01-26 18:57:02.778 -05:00 [INF] CORS policy execution successful.
+2025-01-26 18:57:02.779 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.InvoiceController.CreateInvoice (InvoiceGeneratorAPI)'
+2025-01-26 18:57:02.779 -05:00 [INF] Route matched with {action = "CreateInvoice", controller = "Invoice"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[InvoiceGeneratorAPI.DTOs.Invoice.InvoiceDto]] CreateInvoice(InvoiceGeneratorAPI.DTOs.Invoice.CreateInvoiceRequest) on controller InvoiceGeneratorAPI.Controllers.InvoiceController (InvoiceGeneratorAPI).
+2025-01-26 18:57:02.818 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-01-26 18:57:02.822 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__companyId_0='?' (DbType = Guid), @__request_ClientId_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."CompanyId", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."Name", "c"."Notes", "c"."Phone", "c"."PostalCode", "c"."State", "c"."TaxNumber", "c"."UpdatedAt"
+FROM "Clients" AS "c"
+WHERE "c"."CompanyId" = @__companyId_0 AND "c"."Id" = @__request_ClientId_1
+LIMIT 1
+2025-01-26 18:57:02.832 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__companyId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."ClientAddress", "i"."ClientEmail", "i"."ClientId", "i"."ClientName", "i"."CompanyId", "i"."CreatedAt", "i"."DueDate", "i"."InvoiceNumber", "i"."IssueDate", "i"."Notes", "i"."PaymentInstructions", "i"."PaymentTerms", "i"."Status", "i"."SubTotal", "i"."TaxAmount", "i"."TaxRate", "i"."TotalAmount", "i"."UpdatedAt"
+FROM "Invoices" AS "i"
+WHERE "i"."CompanyId" = @__companyId_0
+ORDER BY "i"."CreatedAt" DESC
+LIMIT 1
+2025-01-26 18:57:02.943 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 6), @p2='?', @p3='?' (DbType = Guid), @p4='?', @p5='?' (DbType = Guid), @p6='?' (DbType = DateTime), @p7='?' (DbType = DateTime), @p8='?' (Size = 9), @p9='?' (DbType = DateTime), @p10='?' (Size = 6), @p11='?' (Size = 6), @p12='?' (Size = 6), @p13='?' (Size = 5), @p14='?' (DbType = Decimal), @p15='?' (DbType = Decimal), @p16='?' (DbType = Decimal), @p17='?' (DbType = Decimal), @p18='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Invoices" ("Id", "ClientAddress", "ClientEmail", "ClientId", "ClientName", "CompanyId", "CreatedAt", "DueDate", "InvoiceNumber", "IssueDate", "Notes", "PaymentInstructions", "PaymentTerms", "Status", "SubTotal", "TaxAmount", "TaxRate", "TotalAmount", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18);
+2025-01-26 18:57:02.950 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Decimal), @p2='?' (Size = 6), @p3='?' (DbType = Guid), @p4='?' (DbType = Decimal), @p5='?' (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "InvoiceItems" ("Id", "Amount", "Description", "InvoiceId", "Quantity", "UnitPrice")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2025-01-26 18:57:02.962 -05:00 [INF] Executing CreatedAtActionResult, writing value of type 'InvoiceGeneratorAPI.DTOs.Invoice.InvoiceDto'.
+2025-01-26 18:57:02.977 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.InvoiceController.CreateInvoice (InvoiceGeneratorAPI) in 195.0447ms
+2025-01-26 18:57:02.978 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.InvoiceController.CreateInvoice (InvoiceGeneratorAPI)'
+2025-01-26 18:57:02.979 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:3000/api/Invoice - 201 null application/json; charset=utf-8 202.7543ms
+2025-01-26 18:57:33.317 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/api/Invoice - null null
+2025-01-26 18:57:33.320 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.InvoiceController.GetInvoices (InvoiceGeneratorAPI)'
+2025-01-26 18:57:33.322 -05:00 [INF] Route matched with {action = "GetInvoices", controller = "Invoice"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[InvoiceGeneratorAPI.DTOs.Invoice.InvoiceDto]]] GetInvoices() on controller InvoiceGeneratorAPI.Controllers.InvoiceController (InvoiceGeneratorAPI).
+2025-01-26 18:57:33.326 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-01-26 18:57:33.360 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__companyId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."ClientAddress", "i"."ClientEmail", "i"."ClientId", "i"."ClientName", "i"."CompanyId", "i"."CreatedAt", "i"."DueDate", "i"."InvoiceNumber", "i"."IssueDate", "i"."Notes", "i"."PaymentInstructions", "i"."PaymentTerms", "i"."Status", "i"."SubTotal", "i"."TaxAmount", "i"."TaxRate", "i"."TotalAmount", "i"."UpdatedAt", "i0"."Id", "i0"."Amount", "i0"."Description", "i0"."InvoiceId", "i0"."Quantity", "i0"."UnitPrice"
+FROM "Invoices" AS "i"
+LEFT JOIN "InvoiceItems" AS "i0" ON "i"."Id" = "i0"."InvoiceId"
+WHERE "i"."CompanyId" = @__companyId_0
+ORDER BY "i"."CreatedAt" DESC, "i"."Id"
+2025-01-26 18:57:33.367 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[InvoiceGeneratorAPI.DTOs.Invoice.InvoiceDto, InvoiceGeneratorAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-01-26 18:57:33.369 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.InvoiceController.GetInvoices (InvoiceGeneratorAPI) in 45.2893ms
+2025-01-26 18:57:33.370 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.InvoiceController.GetInvoices (InvoiceGeneratorAPI)'
+2025-01-26 18:57:33.371 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/api/Invoice - 200 null application/json; charset=utf-8 53.8329ms
+2025-01-26 18:57:47.714 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:3000/api/Invoice/6e3b0895-ba8a-4fa6-94d7-de67c64f8803/send - null 0
+2025-01-26 18:57:47.717 -05:00 [INF] CORS policy execution successful.
+2025-01-26 18:57:47.718 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.InvoiceController.SendInvoice (InvoiceGeneratorAPI)'
+2025-01-26 18:57:47.720 -05:00 [INF] Route matched with {action = "SendInvoice", controller = "Invoice"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] SendInvoice(System.Guid) on controller InvoiceGeneratorAPI.Controllers.InvoiceController (InvoiceGeneratorAPI).
+2025-01-26 18:57:47.725 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-01-26 18:57:47.781 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__companyId_0='?' (DbType = Guid), @__id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."Id", "t"."ClientAddress", "t"."ClientEmail", "t"."ClientId", "t"."ClientName", "t"."CompanyId", "t"."CreatedAt", "t"."DueDate", "t"."InvoiceNumber", "t"."IssueDate", "t"."Notes", "t"."PaymentInstructions", "t"."PaymentTerms", "t"."Status", "t"."SubTotal", "t"."TaxAmount", "t"."TaxRate", "t"."TotalAmount", "t"."UpdatedAt", "t"."Id0", "i0"."Id", "i0"."Amount", "i0"."Description", "i0"."InvoiceId", "i0"."Quantity", "i0"."UnitPrice", "t"."AddressLine1", "t"."AddressLine2", "t"."City", "t"."Country", "t"."CreatedAt0", "t"."Email", "t"."InvoiceNotes", "t"."InvoicePrefix", "t"."LogoUrl", "t"."Name", "t"."PaymentInstructions0", "t"."Phone", "t"."PostalCode", "t"."RegistrationNumber", "t"."State", "t"."TaxNumber", "t"."UpdatedAt0", "t"."UserId", "t"."UserId1", "t"."Website"
+FROM (
+    SELECT "i"."Id", "i"."ClientAddress", "i"."ClientEmail", "i"."ClientId", "i"."ClientName", "i"."CompanyId", "i"."CreatedAt", "i"."DueDate", "i"."InvoiceNumber", "i"."IssueDate", "i"."Notes", "i"."PaymentInstructions", "i"."PaymentTerms", "i"."Status", "i"."SubTotal", "i"."TaxAmount", "i"."TaxRate", "i"."TotalAmount", "i"."UpdatedAt", "c"."Id" AS "Id0", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt" AS "CreatedAt0", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions" AS "PaymentInstructions0", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt" AS "UpdatedAt0", "c"."UserId", "c"."UserId1", "c"."Website"
+    FROM "Invoices" AS "i"
+    INNER JOIN "Companies" AS "c" ON "i"."CompanyId" = "c"."Id"
+    WHERE "i"."CompanyId" = @__companyId_0 AND "i"."Id" = @__id_1
+    LIMIT 1
+) AS "t"
+LEFT JOIN "InvoiceItems" AS "i0" ON "t"."Id" = "i0"."InvoiceId"
+ORDER BY "t"."Id", "t"."Id0"
+2025-01-26 18:57:47.788 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__companyId_0='?' (DbType = Guid), @__id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."Id", "t"."ClientAddress", "t"."ClientEmail", "t"."ClientId", "t"."ClientName", "t"."CompanyId", "t"."CreatedAt", "t"."DueDate", "t"."InvoiceNumber", "t"."IssueDate", "t"."Notes", "t"."PaymentInstructions", "t"."PaymentTerms", "t"."Status", "t"."SubTotal", "t"."TaxAmount", "t"."TaxRate", "t"."TotalAmount", "t"."UpdatedAt", "t"."Id0", "i0"."Id", "i0"."Amount", "i0"."Description", "i0"."InvoiceId", "i0"."Quantity", "i0"."UnitPrice", "t"."AddressLine1", "t"."AddressLine2", "t"."City", "t"."Country", "t"."CreatedAt0", "t"."Email", "t"."InvoiceNotes", "t"."InvoicePrefix", "t"."LogoUrl", "t"."Name", "t"."PaymentInstructions0", "t"."Phone", "t"."PostalCode", "t"."RegistrationNumber", "t"."State", "t"."TaxNumber", "t"."UpdatedAt0", "t"."UserId", "t"."UserId1", "t"."Website"
+FROM (
+    SELECT "i"."Id", "i"."ClientAddress", "i"."ClientEmail", "i"."ClientId", "i"."ClientName", "i"."CompanyId", "i"."CreatedAt", "i"."DueDate", "i"."InvoiceNumber", "i"."IssueDate", "i"."Notes", "i"."PaymentInstructions", "i"."PaymentTerms", "i"."Status", "i"."SubTotal", "i"."TaxAmount", "i"."TaxRate", "i"."TotalAmount", "i"."UpdatedAt", "c"."Id" AS "Id0", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt" AS "CreatedAt0", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions" AS "PaymentInstructions0", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt" AS "UpdatedAt0", "c"."UserId", "c"."UserId1", "c"."Website"
+    FROM "Invoices" AS "i"
+    INNER JOIN "Companies" AS "c" ON "i"."CompanyId" = "c"."Id"
+    WHERE "i"."CompanyId" = @__companyId_0 AND "i"."Id" = @__id_1
+    LIMIT 1
+) AS "t"
+LEFT JOIN "InvoiceItems" AS "i0" ON "t"."Id" = "i0"."InvoiceId"
+ORDER BY "t"."Id", "t"."Id0"
+2025-01-26 18:57:47.838 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.InvoiceController.SendInvoice (InvoiceGeneratorAPI) in 115.4211ms
+2025-01-26 18:57:47.840 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.InvoiceController.SendInvoice (InvoiceGeneratorAPI)'
+2025-01-26 18:57:47.841 -05:00 [ERR] Unhandled exception
+System.Exception: 
+
+
+
+Welcome to QuestPDF! 👋 
+
+QuestPDF is an open-source library committed to long-term sustainability and continuous improvement. 
+
+To maintain high-quality development and support while keeping the library free for most users, we use a fair pricing model where only larger organizations help by providing necessary funding for the project. 
+
+If your organization’s annual gross revenue exceeds $1M USD, a Commercial License is required for production use (you can freely evaluate and test QuestPDF in non-production environments at no cost). In that case, please share this information with your team or management. By purchasing a license, you directly contribute to the ongoing development and reliability of QuestPDF. 
+
+For details on the license types and determining which applies to you, please visit: https://www.questpdf.com/license/ 
+
+We trust our users. To continue, no license key is needed. Instead, simply select and configure the appropriate license in your code. For example, if you qualify for the Community license, add: 
+
+> QuestPDF.Settings.License = LicenseType.Community; 
+
+Thank you for supporting QuestPDF! ❤️ By choosing the right license, you help ensure that our project remains transparent, sustainable, and continuously improving for everyone. 🚀 
+
+
+
+
+   at QuestPDF.Drawing.DocumentGenerator.ValidateLicense()
+   at QuestPDF.Drawing.DocumentGenerator.GeneratePdf(SkWriteStream stream, IDocument document)
+   at QuestPDF.Fluent.GenerateExtensions.GeneratePdf(IDocument document)
+   at InvoiceGeneratorAPI.Services.InvoiceService.GeneratePdfAsync(Guid companyId, Guid id) in C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\InvoiceGeneratorAPI\Services\InvoiceService.cs:line 262
+   at InvoiceGeneratorAPI.Services.InvoiceService.SendInvoiceAsync(Guid companyId, Guid id) in C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\InvoiceGeneratorAPI\Services\InvoiceService.cs:line 276
+   at InvoiceGeneratorAPI.Controllers.InvoiceController.SendInvoice(Guid id) in C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\InvoiceGeneratorAPI\Controllers\InvoiceController.cs:line 112
+   at lambda_method687(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at InvoiceGeneratorAPI.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\InvoiceGeneratorAPI\Middleware\ErrorHandlingMiddleware.cs:line 23
+2025-01-26 18:57:47.862 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:3000/api/Invoice/6e3b0895-ba8a-4fa6-94d7-de67c64f8803/send - 500 null application/json 148.6671ms
+2025-01-26 18:58:25.122 -05:00 [INF] Application is shutting down...
+2025-01-26 18:58:28.478 -05:00 [INF] User profile is available. Using 'C:\Users\Dakota\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-01-26 18:58:28.562 -05:00 [INF] Now listening on: http://localhost:3000
+2025-01-26 18:58:28.566 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-26 18:58:28.567 -05:00 [INF] Hosting environment: Development
+2025-01-26 18:58:28.568 -05:00 [INF] Content root path: C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\InvoiceGeneratorAPI
+2025-01-26 18:58:31.895 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:3000/api/Invoice/6e3b0895-ba8a-4fa6-94d7-de67c64f8803/send - null 0
+2025-01-26 18:58:31.937 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-01-26 18:58:31.998 -05:00 [INF] CORS policy execution successful.
+2025-01-26 18:58:32.002 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.InvoiceController.SendInvoice (InvoiceGeneratorAPI)'
+2025-01-26 18:58:32.020 -05:00 [INF] Route matched with {action = "SendInvoice", controller = "Invoice"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] SendInvoice(System.Guid) on controller InvoiceGeneratorAPI.Controllers.InvoiceController (InvoiceGeneratorAPI).
+2025-01-26 18:58:32.425 -05:00 [WRN] The foreign key property 'Company.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-01-26 18:58:32.675 -05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-01-26 18:58:32.815 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__companyId_0='?' (DbType = Guid), @__id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."Id", "t"."ClientAddress", "t"."ClientEmail", "t"."ClientId", "t"."ClientName", "t"."CompanyId", "t"."CreatedAt", "t"."DueDate", "t"."InvoiceNumber", "t"."IssueDate", "t"."Notes", "t"."PaymentInstructions", "t"."PaymentTerms", "t"."Status", "t"."SubTotal", "t"."TaxAmount", "t"."TaxRate", "t"."TotalAmount", "t"."UpdatedAt", "t"."Id0", "i0"."Id", "i0"."Amount", "i0"."Description", "i0"."InvoiceId", "i0"."Quantity", "i0"."UnitPrice", "t"."AddressLine1", "t"."AddressLine2", "t"."City", "t"."Country", "t"."CreatedAt0", "t"."Email", "t"."InvoiceNotes", "t"."InvoicePrefix", "t"."LogoUrl", "t"."Name", "t"."PaymentInstructions0", "t"."Phone", "t"."PostalCode", "t"."RegistrationNumber", "t"."State", "t"."TaxNumber", "t"."UpdatedAt0", "t"."UserId", "t"."UserId1", "t"."Website"
+FROM (
+    SELECT "i"."Id", "i"."ClientAddress", "i"."ClientEmail", "i"."ClientId", "i"."ClientName", "i"."CompanyId", "i"."CreatedAt", "i"."DueDate", "i"."InvoiceNumber", "i"."IssueDate", "i"."Notes", "i"."PaymentInstructions", "i"."PaymentTerms", "i"."Status", "i"."SubTotal", "i"."TaxAmount", "i"."TaxRate", "i"."TotalAmount", "i"."UpdatedAt", "c"."Id" AS "Id0", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt" AS "CreatedAt0", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions" AS "PaymentInstructions0", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt" AS "UpdatedAt0", "c"."UserId", "c"."UserId1", "c"."Website"
+    FROM "Invoices" AS "i"
+    INNER JOIN "Companies" AS "c" ON "i"."CompanyId" = "c"."Id"
+    WHERE "i"."CompanyId" = @__companyId_0 AND "i"."Id" = @__id_1
+    LIMIT 1
+) AS "t"
+LEFT JOIN "InvoiceItems" AS "i0" ON "t"."Id" = "i0"."InvoiceId"
+ORDER BY "t"."Id", "t"."Id0"
+2025-01-26 18:58:32.865 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__companyId_0='?' (DbType = Guid), @__id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."Id", "t"."ClientAddress", "t"."ClientEmail", "t"."ClientId", "t"."ClientName", "t"."CompanyId", "t"."CreatedAt", "t"."DueDate", "t"."InvoiceNumber", "t"."IssueDate", "t"."Notes", "t"."PaymentInstructions", "t"."PaymentTerms", "t"."Status", "t"."SubTotal", "t"."TaxAmount", "t"."TaxRate", "t"."TotalAmount", "t"."UpdatedAt", "t"."Id0", "i0"."Id", "i0"."Amount", "i0"."Description", "i0"."InvoiceId", "i0"."Quantity", "i0"."UnitPrice", "t"."AddressLine1", "t"."AddressLine2", "t"."City", "t"."Country", "t"."CreatedAt0", "t"."Email", "t"."InvoiceNotes", "t"."InvoicePrefix", "t"."LogoUrl", "t"."Name", "t"."PaymentInstructions0", "t"."Phone", "t"."PostalCode", "t"."RegistrationNumber", "t"."State", "t"."TaxNumber", "t"."UpdatedAt0", "t"."UserId", "t"."UserId1", "t"."Website"
+FROM (
+    SELECT "i"."Id", "i"."ClientAddress", "i"."ClientEmail", "i"."ClientId", "i"."ClientName", "i"."CompanyId", "i"."CreatedAt", "i"."DueDate", "i"."InvoiceNumber", "i"."IssueDate", "i"."Notes", "i"."PaymentInstructions", "i"."PaymentTerms", "i"."Status", "i"."SubTotal", "i"."TaxAmount", "i"."TaxRate", "i"."TotalAmount", "i"."UpdatedAt", "c"."Id" AS "Id0", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt" AS "CreatedAt0", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions" AS "PaymentInstructions0", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt" AS "UpdatedAt0", "c"."UserId", "c"."UserId1", "c"."Website"
+    FROM "Invoices" AS "i"
+    INNER JOIN "Companies" AS "c" ON "i"."CompanyId" = "c"."Id"
+    WHERE "i"."CompanyId" = @__companyId_0 AND "i"."Id" = @__id_1
+    LIMIT 1
+) AS "t"
+LEFT JOIN "InvoiceItems" AS "i0" ON "t"."Id" = "i0"."InvoiceId"
+ORDER BY "t"."Id", "t"."Id0"
+2025-01-26 18:58:33.860 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.InvoiceController.SendInvoice (InvoiceGeneratorAPI) in 1835.5955ms
+2025-01-26 18:58:33.861 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.InvoiceController.SendInvoice (InvoiceGeneratorAPI)'
+2025-01-26 18:58:33.864 -05:00 [ERR] Unhandled exception
+Amazon.SimpleEmailV2.Model.BadRequestException: Invalid email address .
+ ---> Amazon.Runtime.Internal.HttpErrorResponseException: Exception of type 'Amazon.Runtime.Internal.HttpErrorResponseException' was thrown.
+   at Amazon.Runtime.HttpWebRequestMessage.ProcessHttpResponseMessage(HttpResponseMessage responseMessage)
+   at Amazon.Runtime.HttpWebRequestMessage.GetResponseAsync(CancellationToken cancellationToken)
+   at Amazon.Runtime.Internal.HttpHandler`1.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.Unmarshaller.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleExceptionStream(IRequestContext requestContext, IWebResponseData httpErrorResponse, HttpErrorResponseException exception, Stream responseStream)
+   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleExceptionAsync(IExecutionContext executionContext, HttpErrorResponseException exception)
+   at Amazon.Runtime.Internal.ExceptionHandler`1.HandleAsync(IExecutionContext executionContext, Exception exception)
+   at Amazon.Runtime.Internal.ErrorHandler.ProcessExceptionAsync(IExecutionContext executionContext, Exception exception)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.Signer.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.EndpointDiscoveryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.EndpointDiscoveryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeAsync[T](IExecutionContext executionContext)
+   at InvoiceGeneratorAPI.Services.InvoiceService.SendInvoiceAsync(Guid companyId, Guid id) in C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\InvoiceGeneratorAPI\Services\InvoiceService.cs:line 312
+   at InvoiceGeneratorAPI.Controllers.InvoiceController.SendInvoice(Guid id) in C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\InvoiceGeneratorAPI\Controllers\InvoiceController.cs:line 112
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at InvoiceGeneratorAPI.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\InvoiceGeneratorAPI\Middleware\ErrorHandlingMiddleware.cs:line 23
+2025-01-26 18:58:33.926 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:3000/api/Invoice/6e3b0895-ba8a-4fa6-94d7-de67c64f8803/send - 500 null application/json 2032.2259ms
+2025-01-26 18:59:07.571 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/api/Invoice/6e3b0895-ba8a-4fa6-94d7-de67c64f8803/download - null null
+2025-01-26 18:59:07.579 -05:00 [INF] Executing endpoint 'InvoiceGeneratorAPI.Controllers.InvoiceController.DownloadInvoice (InvoiceGeneratorAPI)'
+2025-01-26 18:59:07.583 -05:00 [INF] Route matched with {action = "DownloadInvoice", controller = "Invoice"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] DownloadInvoice(System.Guid) on controller InvoiceGeneratorAPI.Controllers.InvoiceController (InvoiceGeneratorAPI).
+2025-01-26 18:59:07.597 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "c"."Id", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt", "c"."UserId", "c"."UserId1", "c"."Website"
+FROM "Companies" AS "c"
+WHERE "c"."UserId" = @__userId_0
+LIMIT 1
+2025-01-26 18:59:07.599 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__companyId_0='?' (DbType = Guid), @__id_1='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."Id", "t"."ClientAddress", "t"."ClientEmail", "t"."ClientId", "t"."ClientName", "t"."CompanyId", "t"."CreatedAt", "t"."DueDate", "t"."InvoiceNumber", "t"."IssueDate", "t"."Notes", "t"."PaymentInstructions", "t"."PaymentTerms", "t"."Status", "t"."SubTotal", "t"."TaxAmount", "t"."TaxRate", "t"."TotalAmount", "t"."UpdatedAt", "t"."Id0", "i0"."Id", "i0"."Amount", "i0"."Description", "i0"."InvoiceId", "i0"."Quantity", "i0"."UnitPrice", "t"."AddressLine1", "t"."AddressLine2", "t"."City", "t"."Country", "t"."CreatedAt0", "t"."Email", "t"."InvoiceNotes", "t"."InvoicePrefix", "t"."LogoUrl", "t"."Name", "t"."PaymentInstructions0", "t"."Phone", "t"."PostalCode", "t"."RegistrationNumber", "t"."State", "t"."TaxNumber", "t"."UpdatedAt0", "t"."UserId", "t"."UserId1", "t"."Website"
+FROM (
+    SELECT "i"."Id", "i"."ClientAddress", "i"."ClientEmail", "i"."ClientId", "i"."ClientName", "i"."CompanyId", "i"."CreatedAt", "i"."DueDate", "i"."InvoiceNumber", "i"."IssueDate", "i"."Notes", "i"."PaymentInstructions", "i"."PaymentTerms", "i"."Status", "i"."SubTotal", "i"."TaxAmount", "i"."TaxRate", "i"."TotalAmount", "i"."UpdatedAt", "c"."Id" AS "Id0", "c"."AddressLine1", "c"."AddressLine2", "c"."City", "c"."Country", "c"."CreatedAt" AS "CreatedAt0", "c"."Email", "c"."InvoiceNotes", "c"."InvoicePrefix", "c"."LogoUrl", "c"."Name", "c"."PaymentInstructions" AS "PaymentInstructions0", "c"."Phone", "c"."PostalCode", "c"."RegistrationNumber", "c"."State", "c"."TaxNumber", "c"."UpdatedAt" AS "UpdatedAt0", "c"."UserId", "c"."UserId1", "c"."Website"
+    FROM "Invoices" AS "i"
+    INNER JOIN "Companies" AS "c" ON "i"."CompanyId" = "c"."Id"
+    WHERE "i"."CompanyId" = @__companyId_0 AND "i"."Id" = @__id_1
+    LIMIT 1
+) AS "t"
+LEFT JOIN "InvoiceItems" AS "i0" ON "t"."Id" = "i0"."InvoiceId"
+ORDER BY "t"."Id", "t"."Id0"
+2025-01-26 18:59:07.610 -05:00 [INF] Executing FileContentResult, sending file with download name 'invoice-6e3b0895-ba8a-4fa6-94d7-de67c64f8803.pdf' ...
+2025-01-26 18:59:07.651 -05:00 [INF] Executed action InvoiceGeneratorAPI.Controllers.InvoiceController.DownloadInvoice (InvoiceGeneratorAPI) in 65.6752ms
+2025-01-26 18:59:07.653 -05:00 [INF] Executed endpoint 'InvoiceGeneratorAPI.Controllers.InvoiceController.DownloadInvoice (InvoiceGeneratorAPI)'
+2025-01-26 18:59:07.655 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/api/Invoice/6e3b0895-ba8a-4fa6-94d7-de67c64f8803/download - 200 27450 application/pdf 84.4476ms
+2025-01-26 19:03:57.931 -05:00 [INF] Application is shutting down...

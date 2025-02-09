@@ -1,0 +1,19 @@
+2025-02-02 19:08:31.001 -05:00 [INF] User profile is available. Using 'C:\Users\Dakota\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-02 19:08:31.124 -05:00 [INF] Now listening on: http://localhost:3000
+2025-02-02 19:08:31.126 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-02 19:08:31.127 -05:00 [INF] Hosting environment: Development
+2025-02-02 19:08:31.128 -05:00 [INF] Content root path: C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\src\api
+2025-02-02 19:09:02.523 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/ - null null
+2025-02-02 19:09:02.614 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-02-02 19:09:02.662 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/ - 404 0 null 141.8231ms
+2025-02-02 19:09:02.671 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:3000/, Response status code: 404
+2025-02-02 19:09:08.821 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:3000/ - null null
+2025-02-02 19:09:08.825 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:3000/ - 404 0 null 3.6977ms
+2025-02-02 19:09:08.827 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:3000/, Response status code: 404
+2025-02-02 19:09:35.874 -05:00 [INF] Application is shutting down...
+2025-02-02 19:10:34.563 -05:00 [INF] User profile is available. Using 'C:\Users\Dakota\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-02-02 19:10:34.634 -05:00 [INF] Now listening on: http://localhost:4000
+2025-02-02 19:10:34.637 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-02 19:10:34.637 -05:00 [INF] Hosting environment: Development
+2025-02-02 19:10:34.638 -05:00 [INF] Content root path: C:\Users\Dakota\Documents\DakotaOS\business\dev_portfolio\InvoiceGenProject\src\api
+2025-02-02 19:11:36.081 -05:00 [INF] Application is shutting down...

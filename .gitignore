@@ -1,0 +1,15 @@
+# ... other entries ...
+appsettings.Development.json
+appsettings.Production.json
+appsettings.json
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.development
+.env.test
+InvoiceGenerator.db
+bin/
+obj/
+node_modules/
