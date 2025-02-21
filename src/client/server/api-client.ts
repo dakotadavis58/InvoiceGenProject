@@ -8,6 +8,7 @@ interface RequestOptions extends RequestInit {
   method?: string;
   headers?: Record<string, string>;
   parseResponse?: boolean;
+  credentials?: RequestCredentials;
 }
 
 export async function apiClient<T>(
@@ -30,6 +31,7 @@ export async function apiClient<T>(
   const response = await fetch(url, {
     ...options,
     headers,
+    credentials: "include",
     body: options.body ? JSON.stringify(options.body) : undefined,
   });
 

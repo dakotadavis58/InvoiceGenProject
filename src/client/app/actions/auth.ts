@@ -4,6 +4,7 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import type { AuthResponse, RegisterRequest } from "@/types/auth";
 import { apiClient } from "@/server/api-client";
+import { headers } from "next/headers";
 
 interface FormState {
   error?: string;
@@ -14,9 +15,7 @@ export async function loginAction(
   formData: FormData
 ): Promise<FormState> {
   try {
-    console.log("loginAction", formData, state);
-    console.log("email", formData.get("email"));
-    console.log("password", formData.get("password"));
+    console.log("Starting login action...");
 
     const response = await apiClient<AuthResponse>("/api/auth/login", {
       method: "POST",
@@ -24,22 +23,59 @@ export async function loginAction(
         email: formData.get("email"),
         password: formData.get("password"),
       },
+      credentials: "include",
     });
 
-    console.log("response", response);
+    console.log("API Response:", response);
 
+    // Set the cookies from the server action
     const cookieStore = await cookies();
+
+    // Set access token cookie
     cookieStore.set("token", response.token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
       path: "/",
+      maxAge: 15 * 60, // 15 minutes
     });
 
-    // Don't wrap the redirect in try/catch
+    // Set refresh token cookie
+    cookieStore.set("refreshToken", response.refreshToken, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax",
+      path: "/",
+      maxAge: 7 * 24 * 60 * 60, // 7 days
+    });
+
+    // Get the raw headers from the response
+    const allCookies = cookieStore.getAll();
+    console.log("All cookies:", allCookies);
+
+    // Log individual cookies
+    console.log("token cookie:", cookieStore.get("token"));
+    console.log("refreshToken cookie:", cookieStore.get("refreshToken"));
+
+    // Check if cookies are being set but not visible
+    const hasToken = cookieStore.has("token");
+    const hasRefreshToken = cookieStore.has("refreshToken");
+    console.log(
+      "Cookie existence check - token:",
+      hasToken,
+      "refreshToken:",
+      hasRefreshToken
+    );
+
+    // Get the headers from the request object
+    const requestHeaders = headers();
+    console.log(
+      "Request headers:",
+      Object.fromEntries((await requestHeaders).entries())
+    );
+    console.log("Cookie header:", (await requestHeaders).get("cookie"));
   } catch (err) {
     if (err instanceof Error && err.message.includes("NEXT_REDIRECT")) {
-      // Let the redirect happen
       throw err;
     }
     return {
@@ -47,7 +83,6 @@ export async function loginAction(
     };
   }
 
-  // Move the redirect outside the try/catch
   redirect("/dashboard");
 }
 

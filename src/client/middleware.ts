@@ -35,11 +35,9 @@ export function middleware(request: NextRequest) {
   const isPublicPath = path === "/login" || path === "/signup";
 
   // Get both tokens
+
   const refreshToken = request.cookies.get("refreshToken")?.value;
   const accessToken = request.cookies.get("token")?.value;
-
-  console.log("accessToken", accessToken);
-  console.log("refreshToken", refreshToken);
 
   // Check if either token is valid
   const isValid = {
